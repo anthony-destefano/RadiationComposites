@@ -1,0 +1,381 @@
+\documentclass{hitec}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{subcaption} 
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{amsmath}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\lstset{  breaklines=true, numbers=left, numberstyle=\tiny\color{mygray}, keepspaces=true }
+
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{enumitem} %https://www.latex-tutorial.com/tutorials/lists/
+
+%\usepackage{wasysym}
+\usepackage{mathabx}
+
+% https://shantoroy.com/latex/add-subfig-in-latex/
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{pgfplots} % https://www.tug.org/TUGboat/tb31-1/tb97wright-pgfplots.pdf
+
+\usepackage{listings} % https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+
+\usepackage{natbib}
+
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={blue!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+	{3.25ex \@plus1ex \@minus.2ex}%
+	{-1em}%
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+	{3.25ex \@plus1ex \@minus .2ex}%
+	{-1em}%
+	{\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+
+\title{Radiation Dose in Composites}
+\author{Anthony M. DeStefano}
+\company{NASA, MSFC, EV44}
+\confidential{\textbf{-- For internal NASA and partners use only --}}
+\usepackage{hyperref} 
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+
+
+%\section*{Contributing Author List}
+%\addcontentsline{toc}{section}{Contributing Author List}
+
+
+
+\cleardoublepage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Executive Summary}
+%
+%
+%
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Executive Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Material Properties}
+
+Basic material properties that are essential in the estimation of dose are material density and thickness. For higher fidelity calculations of dose, the material stoichiometry is required. If a particular material is layered, the material properties of each layer would be needed. Each layer would assumed to be homogeneous in a particular elemental composition.
+
+In Sections \ref{ssec:composites} and \ref{ssec:MLI}, we discuss assumptions in material properties of composites and multi-layered insulation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Composites}\label{ssec:composites}
+
+To first order, composites are typically composed of a fiber material and a matrix that is dominated by a resin bonding material with additives as a minor component.
+
+\subsubsection{Density}
+In this analysis, three fiber materials were considered:
+
+
+\begin{table}[h]\centering
+	\caption{List of approximate fiber densities.}\label{tab:fiber_dens}
+	\begin{tabular}{|c | c |}\hline
+		Fiber Type & Density [g cm$^{-3}$] \\\hline
+		Glass	& 1.9 \\\hline
+		Aramid	& 1.4 \\\hline
+		Carbon	& 1.6 \\\hline	
+	\end{tabular}
+\end{table}
+
+In composites of interest, the mass percentage of resin is approximately $33-35\%$ (e.g., for composite overwrapped pressure vessels (COPVs)). An example density for epoxy resin is about $1.3$ g cm$^{-3}$ \citep{joven2013characterization}. Therefore, we can approximate the three composite materials as:
+
+\begin{table}[h]\centering
+	\caption{List of approximate composite densities using fiber densities from Table \ref{tab:fiber_dens}, an epoxy resin density of $1.3$ g cm$^{-3}$, and an epoxy resin mass percentage of $33-35\%$.}\label{tab:comp_dens}
+	\begin{tabular}{|c | c |}\hline
+		Composite Type & Density [g cm$^{-3}$] \\\hline
+		Glass + epoxy	& 1.70 \\\hline
+		Aramid + epoxy	& 1.37 \\\hline
+		Carbon + epoxy	& 1.50 \\\hline	
+	\end{tabular}
+\end{table}
+
+\subsubsection{Thickness}
+For a given environment, radiation damage to composites is widely dependent on composition, manufacturing processes, size/thickness, and if any shielding is present. In this analysis, a range of thicknesses are considered based on the following components:
+
+\begin{table}[h]\centering
+	\caption{List of representative materials made of composites with a range of thicknesses.}\label{tab:thickness_comp}
+	\begin{tabular}{|c | c | c |}\hline
+		Composite Component & Min Thickness [mm] & Max Thickness [mm] \\\hline
+		COPV & 1.5 & 19 \\\hline
+		Landing struts	& 1.5 & 19 \\\hline
+		Sandwich panels/Face sheets	& 0.8 & 6.5 \\\hline
+		Solid laminate	& 1 & 19 \\\hline	
+	\end{tabular}
+\end{table}
+
+\subsubsection{Stoichiometry}
+
+At the time of writing, no representative material stoichiometric information has been given. Therefore, placeholder values are assumed that are used in this analysis.
+
+In the SRIM software package, there is a list of common compounds, one of which is epoxy. For the three fiber types shown in Table \ref{tab:fiber_dens}, we assume the most basic elemental composition. Stoichiometry for the epoxy and the fiber materials are shown in Table \ref{tab:stoichiometry}.
+
+\begin{table}[h]\centering
+	\caption{The epoxy resin composition is taken from the common compound table in SRIM. Glass fiber is assumed to be strictly made of silicon-based glass. The aramid fiber is assumed to be a Nomex or Kevlar type aramid. Carbon fiber is assumed to be made of only carbon.}\label{tab:stoichiometry}
+	\begin{tabular}{|c | c |}\hline
+		Material & Stoichiometry [element-count] \\\hline
+		Epoxy resin & H-19, C-18, O-3 \\\hline
+		Glass fiber & O-2, Si-1 \\\hline
+		Aramid fiber & H-2, C-14, N-2, O-2  \\\hline
+		Carbon fiber & C-1  \\\hline	
+	\end{tabular}
+\end{table}
+
+If a homogenized substance composed of the epoxy and fiber material is assumed, a net stoichiometry list (see Table \ref{tab:stoichiometry-net}) can be built using the assumption that the epoxy is $33-35\%$ of the total weight of the composite. Densities from Table \ref{tab:comp_dens} should be used for each of the composites.
+
+\begin{table}[h]\centering
+	\caption{Stoichiometry for each composite is given where the epoxy weight is $33-35\%$ of the total mass.}\label{tab:stoichiometry-net}
+	\begin{tabular}{|c | c |}\hline
+		Material & Stoichiometry [element-count] \\\hline
+		Glass composite & H-19, C-18, O-21, Si-9 \\\hline
+		Aramid composite & H-23, C-46, N-4, O-7  \\\hline
+		Carbon composite & H-19, C-62, O-3  \\\hline	
+	\end{tabular}
+\end{table}
+
+\subsubsection{Proton Stopping Distance}
+
+The effective stopping (shielding) capabilities for a given proton energy of a composite material can be estimated using SRIM. Using the ion stopping and range table calculator in SRIM, we plug in the stoichiometry (Table \ref{tab:stoichiometry-net}) and density (Table \ref{tab:comp_dens}) for each composite material. The generated output provides the projected range, longitudinal and lateral straggling as a function of ion energy. To estimate the maximum stopping distance of the proton, we take the projected range and add half of the lateral straggling, since we are assuming a normally incident beam. The proton energy range used to generate the stopping distance tables is $10$ keV to $1$ GeV, completely encompassing the typical energy range of solar energetic particles (SEPs). See Listings~\ref{lst:glass_composite}-\ref{lst:aluminum} in Appendix \ref{asec:IonStoppingRangeTables} for the stopping distance tables.
+
+The maximum stopping distance as a function of ion energy can be fit by a double power law given by
+\begin{equation}\label{eq:energy_vs_stopping_distance}
+E[keV] = \frac{a}{\left(\frac{x[mm]}{c}\right)^{-b} + x[mm]^{-d}},
+\end{equation}
+where the ion energy $E$ is in keV and the maximum stopping distance $x$ is in mm. The constant $a$ can be thought of as the largest ion energy (in keV) that roughly $1$ mm of material can stop completely. The constant $c$ defines the length scale (in mm) at which low energy ions are affected. The index $b$ is the power law relation that dominates for thin materials (i.e., on the order of $c$ and smaller) and the index $d$ is the power law relation that dominates for thick materials (i.e., much greater than $c$).
+
+For a given material, keeping the stoichiometry the same, changing the density only changes the constants $a$ and $c$. If the initial density is $\rho_0$ and the new density is $\rho_1$, where $\alpha = \rho_1/\rho_0$, the ion energy is then given by
+\begin{equation}\label{eq:energy_vs_stopping_distance_rescaled}
+E[keV] = \frac{a\alpha^d}{\left(\frac{x[mm]}{c\alpha^{\frac{d}{b}-1}}\right)^{-b} + x[mm]^{-d}},
+\end{equation}
+where new constants $a'$ and $c'$ can be defined as
+\begin{align}
+a' &= a\alpha^d, \\
+c' &= c\alpha^{\frac{d}{b}-1},
+\end{align}
+
+Fitting Listings~\ref{lst:glass_composite}-\ref{lst:aluminum} with Equation \ref{eq:energy_vs_stopping_distance}, the parameters $a$, $b$, $c$, and $d$ are given in Table~\ref{tab:stopping_distance}.
+
+\begin{table}[h]\centering
+	\caption{Parameters to the double power law fit of the proton energy as a function of maximum stopping distance of composites compared to aluminum of density $2.702$ g cm$^{-3}$.}\label{tab:stopping_distance}
+	\begin{tabular}{|c | c | c | c | c |}\hline
+		Material & a [keV] & b & c [mm] & d \\\hline
+		Glass composite  & 1.068E4 & 1.668 & 1.31E-2 & 0.5759 \\\hline
+		Aramid composite & 9.89E3  & 1.706 & 1.23E-2 & 0.5721  \\\hline
+		Carbon composite & 1.039E4 & 1.699 & 1.16E-2 & 0.5717 \\\hline
+		Aluminum         & 1.270E4 & 1.529 & 1.49E-2 & 0.5794 \\\hline
+	\end{tabular}
+\end{table}
+
+In order to compare the stopping distance of equal density materials, we rescale the composites to that of aluminum at $2.702$ g cm$^{-3}$ using Equation \ref{eq:energy_vs_stopping_distance_rescaled}. The rescaled parameters are given in Table \ref{tab:stopping_distance_rescaled}.
+
+\begin{table}[h]\centering
+	\caption{Parameters to the double power law fit of the proton energy as a function of maximum stopping distance of composites rescaled to the density of aluminum compared to aluminum of density $2.702$ g cm$^{-3}$.}\label{tab:stopping_distance_rescaled}
+	\begin{tabular}{|c | c | c | c | c |}\hline
+		Material & a [keV] & b & c [mm] & d \\\hline
+		Glass composite  & 1.395E4 & 1.668 & 9.67E-3 & 0.5759 \\\hline
+		Aramid composite & 1.46E4  & 1.706 & 7.83E-3 & 0.5721  \\\hline
+		Carbon composite & 1.455E4 & 1.699 & 7.85E-3 & 0.5717 \\\hline
+		Aluminum         & 1.270E4 & 1.529 & 1.49E-2 & 0.5794 \\\hline
+	\end{tabular}
+\end{table}
+
+Examining Table \ref{tab:stopping_distance_rescaled}, for the list of composites in this analysis, the large thickness range (i.e., much greater than $c$) is independent of material type and density. The small-scale range $c$ for the composites is on the order of $8-10$ $\mu$m and smaller, whereas the small-scale range for aluminum is roughly $15$ $\mu$m and smaller. The index parameter for small scales $b$ seems to be strongly material dependent, which in turn implies the maximum stopped energy to be strongly dependent on materials for thin materials. Observing the $a$ parameter, the composites tend to have greater stopping capability of protons compared to aluminum. This may have to do with the large number of hydrogen atoms present in the composites themselves, since the collision cross section between hydrogen atoms and protons is higher than large-Z materials.
+
+For larger thicknesses $x \gg c$ (i.e., thicknesses greater than roughly 0.5 mils), we can approximate Equation \ref{eq:energy_vs_stopping_distance} as
+\begin{equation}\label{eq:energy_vs_stopping_distance-large_dist}
+E[keV] \sim a x[mm]^d.
+\end{equation}
+In order to use the material density to scale the equivalent thickness, a correction factor is needed if data on aluminum is used to estimate stopping power of composites. These scale factors $\kappa$ can be computed as
+\begin{equation}
+\kappa_{\text{composite}} = \left(\frac{a_{\text{composite}}}{a_{\text{Al}}}\right)^{1/d}.
+\end{equation} 
+
+Therefore, when rescaling the composites to aluminum equivalent thicknesses, the true scaling is given by (taking $d\approx 0.575$)
+\begin{equation}\label{eq:al_equiv_thickness_conversion}
+x_{\text{Al equiv}} = \kappa_{\text{composite}}\frac{\rho_{\text{composite}}}{\rho_{\text{Al}}}x_{\text{composite}},
+\end{equation}
+where $x_{\text{composite}}$ is the composite thickness and $x_{\text{Al equiv}}$ is the corrected aluminum equivalent thickness. The correction factors for the composites studied in this analysis are given in Table \ref{tab:correction_factors}.
+
+\begin{table}[h]\centering
+	\caption{Length scale correction factors to aluminum equivalent modeling of composites.}\label{tab:correction_factors}
+	\begin{tabular}{|c | c |}\hline
+		Material & $\kappa_{\text{composite}}$ \\\hline
+		Glass composite  & 1.177 \\\hline
+		Aramid composite & 1.272   \\\hline
+		Carbon composite & 1.266 \\\hline
+	\end{tabular}
+\end{table}
+
+With the correction factors greater than one, an interpretation can be that for a composite and aluminum coupon of similar areal density, more energy will be absorbed (i.e., more ionizing dose) by the composite per areal density since higher energy protons can be stopped in the composite compared to the aluminum equivalent (i.e., the $a$ parameters for the composites are greater than that for aluminum in Table~\ref{tab:stopping_distance_rescaled}). For example, in order to have the same limiting energy as glass composite, the aluminum equivalent thickness must be increased by $17.7\%$, according to Table \ref{tab:correction_factors}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multi-layered Insulation (MLI)}\label{ssec:MLI}
+
+Multi-layered insulation, or MLI, is used on spacecraft to aid in thermal management and certain types of radiation and contamination protection. In Chapter 5 of the Spacecraft Thermal Control Handbook \citep{donabedian2003spacecraft}, details about MLI applications are descried. Table \ref{tab:MLI} lists separate components of MLI taken from \cite{donabedian2003spacecraft}.
+
+\begin{table}[h]\centering
+	\caption{Various components and layers of MLI and their average densities and thicknesses.}\label{tab:MLI}
+	\begin{tabular}{|c | c | c | c |}\hline
+		Name & Layer & Density [g cm$^{-3}$] & Thickness [mils] \\\hline
+		Beta cloth            & outer     & 1.185 & 8 \\\hline
+		Aluminized beta cloth & outer     & 1.355 & 8 \\\hline
+		Kapton                & outer     & 1.50  & 0.5 - 5 \\\hline
+		Teflon                & outer     & 2.17  & 0.5 - 5 \\\hline
+		Aluminized Kapton     & interior  & 1.50  & 0.3 - 5 \\\hline
+		Goldized Kapton       & interior  & 1.50  & 0.3 - 5 \\\hline
+		Aluminized mylar      & interior  & 1.38  & 0.25 - 5 \\\hline
+		Dacron netting        & separator & 0.04  & 6.5 \\\hline
+		Nomex netting         & separator & 0.04  & 6.5 \\\hline
+		Aluminized polyimide  & inner     & 3.96  & 0.5 - 3 \\\hline
+		Double-goldized       & inner     & 5     & 0.45 \\\hline
+		Glass-reinforced      & inner     & 5     & 0.45 \\\hline
+	\end{tabular}
+\end{table}
+
+Two versions of MLI are constructed to simulate a finite amount of shielding in front of the composite material. In this analysis, aluminized beta cloth - mylar - Nomex is used which amounts to a density of 1.328 g cm$^{-3}$ and a thickness of 22.5 mils. A thin version of this MLI gives a density of 1.435 g cm$^{-3}$ and a thickness of 5.75 mils. The aluminum equivalent is given in Table \ref{tab:al_equiv_MLI}.
+
+\begin{table}[h]\centering
+	\caption{Aluminum equivalent thicknesses for placeholder MLIs, assuming an aluminum density of 2.702 g cm$^{-3}$.}\label{tab:al_equiv_MLI}
+	\begin{tabular}{|c | c | c | c |}\hline
+		Material & Density g cm$^{-3}$ & Thickness [mils] & Al-equiv thickness [mils,mm] \\\hline
+		Thick MLI  & 1.328 & 22.5 & 11.1, 2.81E-1 \\\hline
+		Thin MLI   & 1.435 & 5.75 & 3.05, 7.76E-2   \\\hline
+	\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Radiation Environment}
+
+The leading radiation environment in interplanetary space is often due to solar energetic particles (SEPs) from solar particle events (SPEs). The geomagnetically unshielded SPE environment is used from SLS-SPEC-159 Design Specification for Natural Environments (DSNE), found in Table 3.3.1.10.2-1. The environment is generated using SPENVIS, employing the ESP/PSYCHIC model. The worst case SPE option is used for an override of 1 year with only protons. Output generated from SPENVIS can be found in Listing \ref{lst:SPEworstcase} of Appendix \ref{asec:SPENVISOutput}.
+
+The SPE integral flux can be fit using a Weibull function, given by
+\begin{equation}
+\Phi(>E[MeV]) [\# cm^{-2}] = 9.278\times 10^{11} \exp\left(-1.821E^{0.298}\right),
+\end{equation}
+or by a double power law,
+\begin{equation}
+\Phi(>E[MeV]) [\# cm^{-2}] = \frac{1.248\times 10^{11}}{\left(\frac{E}{13.5}\right)^{2.587} + E^{0.6244}}.
+\end{equation}
+
+Shorter time periods than 1 year should not be scaled linearly. Most of the SPE flux is dominated by a few large SPEs, each occurring over at most 1 week.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dose Estimation}
+
+Given the limited information available, the total ionizing dose (TID) is estimated in composites. The zeroth order estimation uses the DSNE SPE TID tables, which must assume a finite shielding thickness, shown in Section \ref{ssec:DSNEwithShielding}. A first order approximation is done by computing dose-depth curves in composites for various energies and incident angles, shown in Section \ref{ssec:SRIMnoShielding}.
+
+Interestingly, using the DSNE tables, the conservative dose estimate assuming at least 3 mils of aluminum shielding is $7.59E4$ rads (which 3 mils of shielding is outside the validity range of SHIELDOSE2, and the dose is in silicon), whereas the dose estimate with no shielding in a carbon composite is $6.94E4$ rads. Half of the TID is deposited in the first $\sim15$ mils of composite material.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{DSNE with Shielding}\label{ssec:DSNEwithShielding}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{SRIM without Shielding}\label{ssec:SRIMnoShielding}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SRIM Comparison with DSNE (SHIELDOSE2)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\addcontentsline{toc}{section}{Appendix}
+\section{Ion Stopping and Range Tables}
+\label{asec:IonStoppingRangeTables}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={Ion stopping and range tables of protons in glass composite.},label=lst:glass_composite]{Hydrogen in Glass Composite.txt}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={Ion stopping and range tables of protons in aramid composite.},label=lst:aramid_composite]{Hydrogen in Aramid Composite.txt}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={Ion stopping and range tables of protons in carbon composite.},label=lst:carbon_composite]{Hydrogen in Carbon Composite.txt}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={Ion stopping and range tables of protons in aluminum.},label=lst:aluminum]{Hydrogen in Aluminum.txt}
+
+
+\section{SPENVIS Output}
+\label{asec:SPENVISOutput}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={ESP PSYCHIC SPE worst case 1 year.},label=lst:SPEworstcase]{../ESP-PSYCHIC_SPE-worst_case_1yr.txt}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={Dose in silicon as a function of aluminum shielding thickness of a sphere.},label=lst:DoseSphere]{../Dose_SPE-worst_case_1yr-sphere.txt}
+
+\lstinputlisting[language=XML,basicstyle=\footnotesize,frame=single,
+caption={Dose in silicon as a function of aluminum shielding thickness of a slab.},label=lst:DoseSlab]{../Dose_SPE-worst_case_1yr-slab.txt}
+
+
+%\section{References}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{agu}
+\bibliography{report}
+
+\end{document}

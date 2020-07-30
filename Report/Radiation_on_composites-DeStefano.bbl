@@ -1,0 +1,17 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Donabedian and Gilmore}(2003)}]{donabedian2003spacecraft}
+Donabedian, M., and D.~G. Gilmore, \textit{Spacecraft thermal control
+  handbook}, Aerospace Press, 2003.
+
+\bibitem[{\textit{Joven}(2013)}]{joven2013characterization}
+Joven, R., Characterization and modeling of shear stress during manufacturing
+  and thermal properties of structural composite materials, Ph.D. thesis,
+  Wichita State University, 2013.
+
+\end{thebibliography}
