@@ -189,6 +189,7 @@ If a homogenized substance composed of the epoxy and fiber material is assumed, 
 \end{table}
 
 \subsubsection{Proton Stopping Distance}
+\label{sssec:ProtonStoppingDistance}
 
 The effective stopping (shielding) capabilities for a given proton energy of a composite material can be estimated using SRIM. Using the ion stopping and range table calculator in SRIM, we plug in the stoichiometry (Table \ref{tab:stoichiometry-net}) and density (Table \ref{tab:comp_dens}) for each composite material. The generated output provides the projected range, longitudinal and lateral straggling as a function of ion energy. To estimate the maximum stopping distance of the proton, we take the projected range and add half of the lateral straggling, since we are assuming a normally incident beam. The proton energy range used to generate the stopping distance tables is $10$ keV to $1$ GeV, completely encompassing the typical energy range of solar energetic particles (SEPs). See Listings~\ref{lst:glass_composite}-\ref{lst:aluminum} in Appendix \ref{asec:IonStoppingRangeTables} for the stopping distance tables.
 
@@ -303,7 +304,13 @@ Two versions of MLI are constructed to simulate a finite amount of shielding in 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Radiation Environment}
 
-The leading radiation environment in interplanetary space is often due to solar energetic particles (SEPs) from solar particle events (SPEs). The geomagnetically unshielded SPE environment is used from SLS-SPEC-159 Design Specification for Natural Environments (DSNE), found in Table 3.3.1.10.2-1. The environment is generated using SPENVIS, employing the ESP/PSYCHIC model. The worst case SPE option is used for an override of 1 year with only protons. Output generated from SPENVIS can be found in Listing \ref{lst:SPEworstcase} of Appendix \ref{asec:SPENVISOutput}.
+The leading radiation environment in interplanetary space is often due to solar energetic particles (SEPs) from solar particle events (SPEs). The geomagnetically unshielded SPE environment is used from SLS-SPEC-159 Design Specification for Natural Environments (DSNE), found in Table 3.3.1.10.2-1, also shown here in Figure~\ref{fig:DSNE_UnshieldedSPEFlux}. The environment is generated using SPENVIS, employing the ESP/PSYCHIC model. The worst case SPE option is used for an override of 1 year with only protons. Output generated from SPENVIS can be found in Listing \ref{lst:SPEworstcase} of Appendix \ref{asec:SPENVISOutput}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1.0]{DSNE_3.3.1.10.2-1.png}
+	\caption{The unshielded SPE integral and differential fluence as defined in DSNE.}\label{fig:DSNE_UnshieldedSPEFlux}
+\end{figure}
 
 The SPE integral flux can be fit using a Weibull function, given by
 \begin{equation}
@@ -316,22 +323,62 @@ or by a double power law,
 
 Shorter time periods than 1 year should not be scaled linearly. Most of the SPE flux is dominated by a few large SPEs, each occurring over at most 1 week.
 
+Other SPE definitions may also be generated directly from the October 1989 SPE, especially for single event effects (SEE). Rates attributed to the peak 5-minute, worst day, and worst week fluxes are often used to define the SPE SEE environment for interplanetary space. Since this analysis is only concerned about TID, a more statistical approach is used, i.e., the ESP/PSYCHIC models.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dose Estimation}
 
 Given the limited information available, the total ionizing dose (TID) is estimated in composites. The zeroth order estimation uses the DSNE SPE TID tables, which must assume a finite shielding thickness, shown in Section \ref{ssec:DSNEwithShielding}. A first order approximation is done by computing dose-depth curves in composites for various energies and incident angles, shown in Section \ref{ssec:SRIMnoShielding}.
 
-Interestingly, using the DSNE tables, the conservative dose estimate assuming at least 3 mils of aluminum shielding is $7.59E4$ rads (which 3 mils of shielding is outside the validity range of SHIELDOSE2, and the dose is in silicon), whereas the dose estimate with no shielding in a carbon composite is $6.94E4$ rads. Half of the TID is deposited in the first $\sim15$ mils of composite material.
+Interestingly, using the DSNE tables, the conservative dose estimate assuming at least 3 mils of aluminum shielding is $7.59E4$ rads (which 3 mils of shielding is outside the validity range of SHIELDOSE2, and the dose is in silicon), whereas the dose estimate using SRIM with no shielding in a carbon composite is $6.94E4$ rads. Half of the TID is deposited in the first $\sim15$ mils of composite material.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DSNE with Shielding}\label{ssec:DSNEwithShielding}
 
+To use the DSNE to estimate dose in composites, a finite shielding layer is forced on the analysis\footnote{The DSNE TID tables in concern were developed using SHEILDOSE2, which implicitly assumes a finite range of shielding thicknesses.}. TID produced by DSNE Table 3.3.1.10.2-1 (Figure \ref{fig:DSNE_UnshieldedSPEFlux}) can be found in DSNE Table 3.3.1.10.2-3, also shown here in Figure \ref{fig:DSNE_UnshieldedSPETID}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1.0]{DSNE_3.3.1.10.2-3.png}
+	\caption{The TID in silicon as a function of aluminum shielding from unshielded SPE fluence as defined in DSNE.}\label{fig:DSNE_UnshieldedSPETID}
+\end{figure}
+
+The principle idea to compute dose in a composite using DSNE is to first compute the dose with only a thin amount of shielding. In this analysis, two thicknesses of MLI have been considered ($11.1$ and $3.05$ mils of aluminum equivalent thickness), shown in Table \ref{tab:al_equiv_MLI}. Dose in silicon after this MLI shielding is denoted by $D_{\text{MLI}}$. The next step is to add the thickness of the MLI layer and the composite layer (Table \ref{tab:thickness_comp}, spanning 31.5 to 748 mils of composite) as a single layer of aluminum equivalent thickness and compute the dose, $D_{\text{MLI+Composite}}$. The dose in only the composite is then computed by the difference between these two doses,
+\begin{equation}
+D_{\text{composite}} = D_{\text{MLI}} - D_{\text{MLI+Composite}}.
+\end{equation}
+
+To compute a dose $D_{\text{layer}}$ from DSNE Table 3.3.1.10.2-3 (Figure \ref{fig:DSNE_UnshieldedSPETID}), a power law interpolation scheme can be used to estimate dose for a shielding thickness $x_{\text{layer}}$ between two rows in the table. The interpolation scheme for the layer dose is given by
+\begin{equation}
+D_{\text{layer}} = D_i\left(\frac{D_{i+1}}{D_i}\right)^{\frac{\log(x_{\text{layer}}/x_i)}{\log(x_{i+1}/x_i})},
+\end{equation}
+where $x_{i+1} \ge x_{\text{layer}} > x_i$, for $x$ in units of mm and $D$ in units of cGy(Si) per year.
+
+\begin{table}[h]\centering
+	\caption{Estimation of dose using DSNE Table 3.3.1.10.2-3 in composites with two MLI shielding thicknesses and three composites each with two thicknesses (31.5 mils and 748 mils of composite). Thicknesses of MLI and composites were converted to aluminum equivalent thicknesses. The correction factor for each composite (Table \ref{tab:correction_factors}) is used to derive the aluminum equivalent thickness.}\label{tab:dose_composite_DSNE}
+	\begin{tabular}{|c | c | c |}\hline
+			 &Thin MLI (3.05 mils Al) & Thick MLI (11.1 mils Al) \\\hline
+		Composite & TID dose [rad] &  TID dose [rad] \\\hline
+		Thin glass (23.3 mils Al)   & 6.312E4 & 2.123E4 \\\hline
+		Thick glass (554 mils Al)   & 7.594E4 & 3.083E4 \\\hline
+		Thin aramid (20.3 mils Al)  & 6.130E4 & 2.023E4\\\hline
+		Thick aramid (482 mils Al)  & 7.581E4 & 3.070E4\\\hline
+		Thin carbon (22.1 mils Al)  & 6.246E4 & 2.086E4\\\hline
+		Thick carbon (526 mils Al) & 7.589E4 & 3.078E4\\\hline
+	\end{tabular}
+\end{table}
+
+Examining Table \ref{tab:dose_composite_DSNE}, the range of doses is from $2.023E4$ rad to $7.594E4$ rad. Any finite amount of shielding can limit the dose to the composite layer. The doses estimated using the thin MLI case are just above the minimum limit of $0.05$ mm (or $2$ mils) that SHIELDOSE2 can handle\footnote{\url{https://www.spenvis.oma.be/help/background/shieldose/shieldose.html}}\textsuperscript{,}\footnote{\url{https://www.spenvis.oma.be/help/models/sd2q.html}}. It is expected that by removing the MLI shielding, the estimated doses will be greater than the $7.594E4$ rad upper limit shown in Table~\ref{tab:dose_composite_DSNE}. However, further analysis is required to sharpen this dose estimate in composites. In Section \ref{ssec:SRIMnoShielding}, dose estimates in higher fidelity composite surrogates using SRIM with no shielding is discussed.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{SRIM without Shielding}\label{ssec:SRIMnoShielding}
+
+The Stopping and Range of Ions in Matter (SRIM) \citep{ziegler2009srim} is a group of programs that calculate the stopping and range of ions in matter\footnote{\url{http://www.srim.org/SRIM/SRIMINTRO.htm}}. The ion stopping and range table calculator in SRIM was used in Section \ref{sssec:ProtonStoppingDistance}. For each run using TRIM (Transport of Ions in Matter), a mono-energetic beam of a single incident angle is used at the environment and transported through a series of predefined layers in a Monte Carlo fashion.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

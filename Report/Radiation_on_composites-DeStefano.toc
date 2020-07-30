@@ -10,9 +10,9 @@
 \contentsline {section}{\numberline {4}Radiation Environment}{6}{section.4}%
 \contentsline {section}{\numberline {5}Dose Estimation}{6}{section.5}%
 \contentsline {subsection}{\numberline {5.1}DSNE with Shielding}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}SRIM without Shielding}{7}{subsection.5.2}%
-\contentsline {section}{\numberline {6}SRIM Comparison with DSNE (SHIELDOSE2)}{7}{section.6}%
-\contentsline {section}{Appendix}{7}{section.6}%
-\contentsline {section}{\numberline {A}Ion Stopping and Range Tables}{7}{appendix.A}%
-\contentsline {section}{\numberline {B}SPENVIS Output}{19}{appendix.B}%
-\contentsline {section}{References}{26}{section*.11}%
+\contentsline {subsection}{\numberline {5.2}SRIM without Shielding}{9}{subsection.5.2}%
+\contentsline {section}{\numberline {6}SRIM Comparison with DSNE (SHIELDOSE2)}{9}{section.6}%
+\contentsline {section}{Appendix}{9}{section.6}%
+\contentsline {section}{\numberline {A}Ion Stopping and Range Tables}{9}{appendix.A}%
+\contentsline {section}{\numberline {B}SPENVIS Output}{21}{appendix.B}%
+\contentsline {section}{References}{29}{section*.14}%

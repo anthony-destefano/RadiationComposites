@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -13,5 +13,10 @@ Donabedian, M., and D.~G. Gilmore, \textit{Spacecraft thermal control
 Joven, R., Characterization and modeling of shear stress during manufacturing
   and thermal properties of structural composite materials, Ph.D. thesis,
   Wichita State University, 2013.
+
+\bibitem[{\textit{Ziegler et~al.}(2009)\textit{Ziegler, Biersack, and
+  Ziegler}}]{ziegler2009srim}
+Ziegler, J.~F., J.~P. Biersack, and M.~D. Ziegler, \textit{SRIM--The stopping
+  and range of ions in matter (2008)}, 2009.
 
 \end{thebibliography}
