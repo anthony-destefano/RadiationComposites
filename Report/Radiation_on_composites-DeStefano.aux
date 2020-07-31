@@ -69,29 +69,53 @@
 \newlabel{tab:dose_composite_DSNE}{{11}{9}{Estimation of dose using DSNE Table 3.3.1.10.2-3 in composites with two MLI shielding thicknesses and three composites each with two thicknesses (31.5 mils and 748 mils of composite). Thicknesses of MLI and composites were converted to aluminum equivalent thicknesses. The correction factor for each composite (Table \ref {tab:correction_factors}) is used to derive the aluminum equivalent thickness.\relax }{table.caption.13}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}SRIM without Shielding}{9}{subsection.5.2}\protected@file@percent }
 \newlabel{ssec:SRIMnoShielding}{{5.2}{9}{SRIM without Shielding}{subsection.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}SRIM Comparison with DSNE (SHIELDOSE2)}{9}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{Appendix}{9}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Ion Stopping and Range Tables}{9}{appendix.A}\protected@file@percent }
-\newlabel{asec:IonStoppingRangeTables}{{A}{9}{Ion Stopping and Range Tables}{appendix.A}{}}
-\newlabel{lst:glass_composite}{{1}{9}{Ion stopping and range tables of protons in glass composite}{lstlisting.1}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Ion stopping and range tables of protons in glass composite.}{9}{lstlisting.1}\protected@file@percent }
-\newlabel{lst:aramid_composite}{{2}{12}{Ion stopping and range tables of protons in aramid composite}{lstlisting.2}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Ion stopping and range tables of protons in aramid composite.}{12}{lstlisting.2}\protected@file@percent }
-\newlabel{lst:carbon_composite}{{3}{15}{Ion stopping and range tables of protons in carbon composite}{lstlisting.3}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Ion stopping and range tables of protons in carbon composite.}{15}{lstlisting.3}\protected@file@percent }
-\newlabel{lst:aluminum}{{4}{18}{Ion stopping and range tables of protons in aluminum}{lstlisting.4}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Ion stopping and range tables of protons in aluminum.}{18}{lstlisting.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {B}SPENVIS Output}{21}{appendix.B}\protected@file@percent }
-\newlabel{asec:SPENVISOutput}{{B}{21}{SPENVIS Output}{appendix.B}{}}
-\newlabel{lst:SPEworstcase}{{5}{21}{ESP PSYCHIC SPE worst case 1 year}{lstlisting.5}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}ESP PSYCHIC SPE worst case 1 year.}{21}{lstlisting.5}\protected@file@percent }
-\newlabel{lst:DoseSphere}{{6}{26}{Dose in silicon as a function of aluminum shielding thickness of a sphere}{lstlisting.6}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}Dose in silicon as a function of aluminum shielding thickness of a sphere.}{26}{lstlisting.6}\protected@file@percent }
-\newlabel{lst:DoseSlab}{{7}{27}{Dose in silicon as a function of aluminum shielding thickness of a slab}{lstlisting.7}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}Dose in silicon as a function of aluminum shielding thickness of a slab.}{27}{lstlisting.7}\protected@file@percent }
+\citation{seltzer1986conversion}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Angular weight factors $w_i$ where $\sum _i w_i = 1$. The $\theta _i$ and $\theta _{i+1}$ are bin edges where $\theta $ is taken as the approximate bin center.\relax }}{10}{table.caption.14}\protected@file@percent }
+\newlabel{tab:incidentAngleBins}{{12}{10}{Angular weight factors $w_i$ where $\sum _i w_i = 1$. The $\theta _i$ and $\theta _{i+1}$ are bin edges where $\theta $ is taken as the approximate bin center.\relax }{table.caption.14}{}}
+\newlabel{eq:seltzer86_Eq9}{{15}{10}{SRIM without Shielding}{equation.5.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Dose per 0.2 mm as a function of depth in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{11}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:LayerDoseinSlab_vs_Depth}{{3}{11}{Dose per 0.2 mm as a function of depth in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Total dose as a function of carbon composite thickness in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{11}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:TotalDoseinSlab_vs_Thickness}{{4}{11}{Total dose as a function of carbon composite thickness in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }{figure.caption.16}{}}
+\newlabel{eq:slab_dose_power_law}{{16}{11}{SRIM without Shielding}{equation.5.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Dose per 0.1 MeV as a function of ion energy using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{12}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:Dose_vs_IonEnergy}{{5}{12}{Dose per 0.1 MeV as a function of ion energy using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }{figure.caption.17}{}}
+\newlabel{eq:seltzer86_Eq9-powerlawDose}{{18}{12}{SRIM without Shielding}{equation.5.18}{}}
+\newlabel{eq:seltzer86_Eq9-powerlawDose2}{{19}{12}{SRIM without Shielding}{equation.5.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Dose per 0.2 mm as a function of depth in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{13}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:LayerDoseinSphere_vs_Depth}{{6}{13}{Dose per 0.2 mm as a function of depth in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Total dose as a function of carbon composite thickness in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{13}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:TotalDoseinSphere_vs_Thickness}{{7}{13}{Total dose as a function of carbon composite thickness in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}SRIM Comparison with DSNE (SHIELDOSE2)}{13}{section.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Dose to silicon in slab and spherical geometric as a function of aluminum shielding thickness. Equation \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:seltzer86_Eq9-powerlawDose2}\unskip \@@italiccorr )}} was used to convert slab doses to sphere doses.\relax }}{14}{table.caption.20}\protected@file@percent }
+\newlabel{tab:SRIM_doses}{{13}{14}{Dose to silicon in slab and spherical geometric as a function of aluminum shielding thickness. Equation \eqref {eq:seltzer86_Eq9-powerlawDose2} was used to convert slab doses to sphere doses.\relax }{table.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between slab dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }}{14}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:Dose_vs_shielding_slab_comparison}{{8}{14}{Comparison between slab dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{Appendix}{14}{figure.caption.22}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison between sphere dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }}{15}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:Dose_vs_shielding_sphere_comparison}{{9}{15}{Comparison between sphere dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Ion Stopping and Range Tables}{15}{appendix.A}\protected@file@percent }
+\newlabel{asec:IonStoppingRangeTables}{{A}{15}{Ion Stopping and Range Tables}{appendix.A}{}}
+\newlabel{lst:glass_composite}{{1}{15}{Ion stopping and range tables of protons in glass composite}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Ion stopping and range tables of protons in glass composite.}{15}{lstlisting.1}\protected@file@percent }
+\newlabel{lst:aramid_composite}{{2}{18}{Ion stopping and range tables of protons in aramid composite}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Ion stopping and range tables of protons in aramid composite.}{18}{lstlisting.2}\protected@file@percent }
+\newlabel{lst:carbon_composite}{{3}{21}{Ion stopping and range tables of protons in carbon composite}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Ion stopping and range tables of protons in carbon composite.}{21}{lstlisting.3}\protected@file@percent }
+\newlabel{lst:aluminum}{{4}{24}{Ion stopping and range tables of protons in aluminum}{lstlisting.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Ion stopping and range tables of protons in aluminum.}{24}{lstlisting.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}SPENVIS Output}{27}{appendix.B}\protected@file@percent }
+\newlabel{asec:SPENVISOutput}{{B}{27}{SPENVIS Output}{appendix.B}{}}
+\newlabel{lst:SPEworstcase}{{5}{27}{ESP PSYCHIC SPE worst case 1 year}{lstlisting.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}ESP PSYCHIC SPE worst case 1 year.}{27}{lstlisting.5}\protected@file@percent }
+\newlabel{lst:DoseSphere}{{6}{32}{Dose in silicon as a function of aluminum shielding thickness of a sphere}{lstlisting.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}Dose in silicon as a function of aluminum shielding thickness of a sphere.}{32}{lstlisting.6}\protected@file@percent }
+\newlabel{lst:DoseSlab}{{7}{33}{Dose in silicon as a function of aluminum shielding thickness of a slab}{lstlisting.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}Dose in silicon as a function of aluminum shielding thickness of a slab.}{33}{lstlisting.7}\protected@file@percent }
 \bibstyle{agu}
 \bibdata{report}
 \bibcite{donabedian2003spacecraft}{{1}{2003}{{\textit  {Donabedian and Gilmore}}}{{}}}
 \bibcite{joven2013characterization}{{2}{2013}{{\textit  {Joven}}}{{}}}
-\bibcite{ziegler2009srim}{{3}{2009}{{\textit  {Ziegler et~al.}}}{{\textit  {Ziegler, Biersack, and Ziegler}}}}
-\@writefile{toc}{\contentsline {section}{References}{29}{section*.14}\protected@file@percent }
+\bibcite{seltzer1986conversion}{{3}{1986}{{\textit  {Seltzer}}}{{}}}
+\bibcite{ziegler2009srim}{{4}{2009}{{\textit  {Ziegler et~al.}}}{{\textit  {Ziegler, Biersack, and Ziegler}}}}
+\@writefile{toc}{\contentsline {section}{References}{34}{section*.23}\protected@file@percent }
