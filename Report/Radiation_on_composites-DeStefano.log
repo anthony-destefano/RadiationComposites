@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  31 JUL 2020 00:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  4 AUG 2020 17:31
 entering extended mode
 **./Radiation_on_composites-DeStefano.tex
 (Radiation_on_composites-DeStefano.tex
@@ -283,6 +283,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
+("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\epsfig
+.sty"
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen166
+\epsfysize=\dimen167
+)
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/siunitx\siunitx
 .sty"
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.
@@ -308,9 +314,9 @@ Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty
 "
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen166
+\col@sep=\dimen168
 \ar@mcellbox=\box56
-\extrarowheight=\dimen167
+\extrarowheight=\dimen169
 \NC@list=\toks25
 \extratabsurround=\skip59
 \backup@length=\skip60
@@ -321,7 +327,7 @@ ys2e\l3keys2e.sty"
 Package: l3keys2e 2020-03-03 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box58
-\l__siunitx_tmp_dim=\dimen168
+\l__siunitx_tmp_dim=\dimen170
 \l__siunitx_tmp_int=\count280
 \l__siunitx_number_mantissa_length_int=\count281
 \l__siunitx_number_uncert_length_int=\count282
@@ -334,8 +340,8 @@ Package: l3keys2e 2020-03-03 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_group_min_int=\count289
 \l__siunitx_angle_marker_box=\box59
 \l__siunitx_angle_unit_box=\box60
-\l__siunitx_angle_marker_dim=\dimen169
-\l__siunitx_angle_unit_dim=\dimen170
+\l__siunitx_angle_marker_dim=\dimen171
+\l__siunitx_angle_unit_dim=\dimen172
 \l__siunitx_unit_int=\count290
 \l__siunitx_unit_denominator_int=\count291
 \l__siunitx_unit_numerator_int=\count292
@@ -345,15 +351,15 @@ Package: l3keys2e 2020-03-03 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_number_product_int=\count296
 \c__siunitx_one_fill_skip=\skip61
 \l__siunitx_table_unit_align_skip=\skip62
-\l__siunitx_table_exponent_dim=\dimen171
-\l__siunitx_table_integer_dim=\dimen172
-\l__siunitx_table_mantissa_dim=\dimen173
-\l__siunitx_table_marker_dim=\dimen174
-\l__siunitx_table_result_dim=\dimen175
-\l__siunitx_table_uncert_dim=\dimen176
-\l__siunitx_table_fill_pre_dim=\dimen177
-\l__siunitx_table_fill_post_dim=\dimen178
-\l__siunitx_table_fill_mid_dim=\dimen179
+\l__siunitx_table_exponent_dim=\dimen173
+\l__siunitx_table_integer_dim=\dimen174
+\l__siunitx_table_mantissa_dim=\dimen175
+\l__siunitx_table_marker_dim=\dimen176
+\l__siunitx_table_result_dim=\dimen177
+\l__siunitx_table_uncert_dim=\dimen178
+\l__siunitx_table_fill_pre_dim=\dimen179
+\l__siunitx_table_fill_post_dim=\dimen180
+\l__siunitx_table_fill_mid_dim=\dimen181
 \l__siunitx_table_pre_box=\box61
 \l__siunitx_table_post_box=\box62
 \l__siunitx_table_mantissa_box=\box63
@@ -371,12 +377,12 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box65
 \beforetitleunit=\skip65
 \aftertitleunit=\skip66
-\ttl@plus=\dimen180
-\ttl@minus=\dimen181
+\ttl@plus=\dimen182
+\ttl@minus=\dimen183
 \ttl@toksa=\toks26
-\titlewidth=\dimen182
-\titlewidthlast=\dimen183
-\titlewidthfirst=\dimen184
+\titlewidth=\dimen184
+\titlewidthlast=\dimen185
+\titlewidthfirst=\dimen186
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperr
 ef.sty"
@@ -418,7 +424,7 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ions.sty"
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen185
+\@linkdim=\dimen187
 \Hy@linkcounter=\count297
 \Hy@pagecounter=\count298
 
@@ -451,7 +457,7 @@ Package hyperref Info: Bookmarks ON on input line 4800.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen186
+\XeTeXLinkMargin=\dimen188
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset
 .sty"
@@ -463,8 +469,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count301
-\Field@Width=\dimen187
-\Fld@charsize=\dimen188
+\Field@Width=\dimen189
+\Fld@charsize=\dimen190
 Package hyperref Info: Hyper figures OFF on input line 6430.
 Package hyperref Info: Link nesting OFF on input line 6435.
 Package hyperref Info: Hyper index ON on input line 6438.
@@ -509,7 +515,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 em.sty"
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip68
-\enit@outerparindent=\dimen189
+\enit@outerparindent=\dimen191
 \enit@toks=\toks27
 \enit@inbox=\box66
 \enit@count@id=\count307
@@ -617,7 +623,7 @@ LaTeX Font Info:    Redeclaring math symbol \oslash on input line 675.
 \mayacnta=\count310
 \mayacntb=\count311
 \mayacntc=\count312
-\mayawidth=\dimen190
+\mayawidth=\dimen192
 LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
 LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
 LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 842.
@@ -662,8 +668,8 @@ gfrcs.sty"
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities
 \pgfutil-common.tex"
 \pgfutil@everybye=\toks28
-\pgfutil@tempdima=\dimen191
-\pgfutil@tempdimb=\dimen192
+\pgfutil@tempdima=\dimen193
+\pgfutil@tempdimb=\dimen194
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities
 \pgfutil-common-lists.tex"))
@@ -700,16 +706,16 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \pgfkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks31
 ))
-\pgf@x=\dimen193
-\pgf@y=\dimen194
-\pgf@xa=\dimen195
-\pgf@ya=\dimen196
-\pgf@xb=\dimen197
-\pgf@yb=\dimen198
-\pgf@xc=\dimen199
-\pgf@yc=\dimen256
-\pgf@xd=\dimen257
-\pgf@yd=\dimen258
+\pgf@x=\dimen195
+\pgf@y=\dimen196
+\pgf@xa=\dimen197
+\pgf@ya=\dimen198
+\pgf@xb=\dimen199
+\pgf@yb=\dimen256
+\pgf@xc=\dimen257
+\pgf@yc=\dimen258
+\pgf@xd=\dimen259
+\pgf@yd=\dimen260
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
 \c@pgf@counta=\count313
@@ -757,7 +763,7 @@ athcalc.code.tex"
 athutil.code.tex")
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfm
 athparser.code.tex"
-\pgfmath@dimen=\dimen259
+\pgfmath@dimen=\dimen261
 \pgfmath@count=\count320
 \pgfmath@box=\box68
 \pgfmath@toks=\toks35
@@ -791,32 +797,32 @@ nt.code.tex")
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen260
-\pgf@picmaxx=\dimen261
-\pgf@picminy=\dimen262
-\pgf@picmaxy=\dimen263
-\pgf@pathminx=\dimen264
-\pgf@pathmaxx=\dimen265
-\pgf@pathminy=\dimen266
-\pgf@pathmaxy=\dimen267
-\pgf@xx=\dimen268
-\pgf@xy=\dimen269
-\pgf@yx=\dimen270
-\pgf@yy=\dimen271
-\pgf@zx=\dimen272
-\pgf@zy=\dimen273
+\pgf@picminx=\dimen262
+\pgf@picmaxx=\dimen263
+\pgf@picminy=\dimen264
+\pgf@picmaxy=\dimen265
+\pgf@pathminx=\dimen266
+\pgf@pathmaxx=\dimen267
+\pgf@pathminy=\dimen268
+\pgf@pathmaxy=\dimen269
+\pgf@xx=\dimen270
+\pgf@xy=\dimen271
+\pgf@yx=\dimen272
+\pgf@yy=\dimen273
+\pgf@zx=\dimen274
+\pgf@zy=\dimen275
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen274
-\pgf@path@lasty=\dimen275
+\pgf@path@lastx=\dimen276
+\pgf@path@lasty=\dimen277
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen276
-\pgf@shorten@start@additional=\dimen277
+\pgf@shorten@end@additional=\dimen278
+\pgf@shorten@start@additional=\dimen279
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcorescopes.code.tex"
@@ -829,14 +835,14 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen278
+\pgflinewidth=\dimen280
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen279
-\pgf@pt@y=\dimen280
-\pgf@pt@temp=\dimen281
+\pgf@pt@x=\dimen281
+\pgf@pt@y=\dimen282
+\pgf@pt@temp=\dimen283
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcorequick.code.tex"
@@ -853,12 +859,12 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen282
+\pgfarrowsep=\dimen284
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclaye
 r\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen283
+\pgf@max=\dimen285
 \pgf@sys@shading@range@num=\count323
 \pgf@shadingcount=\count324
 )
@@ -899,8 +905,8 @@ File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibili
 ty\pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen284
-\pgf@nodesepend=\dimen285
+\pgf@nodesepstart=\dimen286
+\pgf@nodesepend=\dimen287
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibili
 ty\pgfcomp-version-1-18.sty"
@@ -922,8 +928,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfm
 ath.code.tex")
-\pgffor@iter=\dimen286
-\pgffor@skip=\dimen287
+\pgffor@iter=\dimen288
+\pgffor@skip=\dimen289
 \pgffor@stack=\toks38
 \pgffor@toks=\toks39
 ))
@@ -935,16 +941,16 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 \pgflibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@plot@mark@count=\count325
-\pgfplotmarksize=\dimen288
+\pgfplotmarksize=\dimen290
 )
-\tikz@lastx=\dimen289
-\tikz@lasty=\dimen290
-\tikz@lastxsaved=\dimen291
-\tikz@lastysaved=\dimen292
-\tikz@lastmovetox=\dimen293
-\tikz@lastmovetoy=\dimen294
-\tikzleveldistance=\dimen295
-\tikzsiblingdistance=\dimen296
+\tikz@lastx=\dimen291
+\tikz@lasty=\dimen292
+\tikz@lastxsaved=\dimen293
+\tikz@lastysaved=\dimen294
+\tikz@lastmovetox=\dimen295
+\tikz@lastmovetoy=\dimen296
+\tikzleveldistance=\dimen297
+\tikzsiblingdistance=\dimen298
 \tikz@figbox=\box74
 \tikz@figbox@bg=\box75
 \tikz@tempbox=\box76
@@ -974,7 +980,7 @@ lotscore.code.tex"
 \t@pgfplots@toka=\toks40
 \t@pgfplots@tokb=\toks41
 \t@pgfplots@tokc=\toks42
-\pgfplots@tmpa=\dimen297
+\pgfplots@tmpa=\dimen299
 \c@pgfplots@coordindex=\count334
 \c@pgfplots@scanlineindex=\count335
 
@@ -1045,14 +1051,14 @@ lots.paths.code.tex")
 ayer/tikz/libraries\tikzlibrarydecorations.code.tex"
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\p
 gfmoduledecorations.code.tex"
-\pgfdecoratedcompleteddistance=\dimen298
-\pgfdecoratedremainingdistance=\dimen299
-\pgfdecoratedinputsegmentcompleteddistance=\dimen300
-\pgfdecoratedinputsegmentremainingdistance=\dimen301
-\pgf@decorate@distancetomove=\dimen302
+\pgfdecoratedcompleteddistance=\dimen300
+\pgfdecoratedremainingdistance=\dimen301
+\pgfdecoratedinputsegmentcompleteddistance=\dimen302
+\pgfdecoratedinputsegmentremainingdistance=\dimen303
+\pgf@decorate@distancetomove=\dimen304
 \pgf@decorate@repeatstate=\count339
-\pgfdecorationsegmentamplitude=\dimen303
-\pgfdecorationsegmentlength=\dimen304
+\pgfdecorationsegmentamplitude=\dimen305
+\pgfdecorationsegmentlength=\dimen306
 )
 \tikz@lib@dec@box=\box78
 )
@@ -1065,12 +1071,12 @@ ayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex"
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries
 /decorations\pgflibrarydecorations.pathreplacing.code.tex"))
 \pgfplots@numplots=\count340
-\pgfplots@xmin@reg=\dimen305
-\pgfplots@xmax@reg=\dimen306
-\pgfplots@ymin@reg=\dimen307
-\pgfplots@ymax@reg=\dimen308
-\pgfplots@zmin@reg=\dimen309
-\pgfplots@zmax@reg=\dimen310
+\pgfplots@xmin@reg=\dimen307
+\pgfplots@xmax@reg=\dimen308
+\pgfplots@ymin@reg=\dimen309
+\pgfplots@ymax@reg=\dimen310
+\pgfplots@zmin@reg=\dimen311
+\pgfplots@zmax@reg=\dimen312
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendl
 ayer/tikz/libraries\tikzlibraryplotmarks.code.tex"
@@ -1088,29 +1094,36 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count341
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
+
+("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colort
+bl.sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks44
+\minrowclearance=\skip71
+)
 \c@subsubsubsection=\count342
  (Radiation_on_composites-DeStefano.aux)
 \openout1 = `Radiation_on_composites-DeStefano.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 7
-7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 8
+4.
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1phv.f
 d"
@@ -1141,16 +1154,16 @@ LaTeX Warning: Font shape declaration has incorrect series value `mc'.
 p-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count343
-\scratchdimen=\dimen311
+\scratchdimen=\dimen313
 \scratchbox=\box79
 \nofMPsegments=\count344
 \nofMParguments=\count345
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks45
 \MPscratchCnt=\count346
-\MPscratchDim=\dimen312
+\MPscratchDim=\dimen314
 \MPnumerator=\count347
 \makeMPintoPDFobject=\count348
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks46
 )
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\ep
 stopdf-base.sty"
@@ -1179,7 +1192,7 @@ Dictionary: translator-basic-dictionary, Language: English
 -abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-Package hyperref Info: Link coloring ON on input line 77.
+Package hyperref Info: Link coloring ON on input line 84.
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\namere
 f.sty"
@@ -1195,9 +1208,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count350
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
  (Radiation_on_composites-DeStefano.out)
 (Radiation_on_composites-DeStefano.out)
 \@outlinefile=\write4
@@ -1208,7 +1221,7 @@ LaTeX Info: Redefining \nameref on input line 77.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 77.
+ on input line 84.
 
 (Radiation_on_composites-DeStefano.toc)
 \tf@toc=\write5
@@ -1218,7 +1231,7 @@ your preamble.
 [1
 
 {C:/Users/adestefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (14.79506pt too wide) in paragraph at lines 5--5
+Overfull \hbox (14.79506pt too wide) in paragraph at lines 4--4
  [][] [][][]\OT1/phv/m/n/10 Dose per 0.1 MeV as a func-tion of ion en-ergy us-i
 ng DSNE Ta-ble 3.3.1.10.2- 
  []
@@ -1229,7 +1242,7 @@ ng DSNE Ta-ble 3.3.1.10.2-
 
  (Radiation_on_composites-DeStefano.lot
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 11.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 12.
  [2])
 \tf@lot=\write7
 \openout7 = `Radiation_on_composites-DeStefano.lot'.
@@ -1248,32 +1261,41 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3] [4] [5]
-<DSNE_3.3.1.10.2-1.png, id=266, 229.35687pt x 294.60063pt>
-File: DSNE_3.3.1.10.2-1.png Graphic file (type png)
-<use DSNE_3.3.1.10.2-1.png>
-Package pdftex.def Info: DSNE_3.3.1.10.2-1.png  used on input line 313.
-(pdftex.def)             Requested size: 229.35631pt x 294.5999pt.
+Package epstopdf Info: Source file: <DSNE_Plot_3.3.1.10.2-1.eps>
+(epstopdf)                    date: 2020-08-03 11:46:09
+(epstopdf)                    size: 92636 bytes
+(epstopdf)             Output file: <DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-08-03 11:50:09
+(epstopdf)                    size: 20339 bytes
+(epstopdf)             Command: <epstopdf --outfile=DSNE_Plot_3.3.1.10.2-1-eps-
+converted-to.pdf DSNE_Plot_3.3.1.10.2-1.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+pdfTeX warning: pdflatex.exe (file ./DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pdf, id=271, 462.72874pt x 347.2975pt>
 
-[6]
-<DSNE_3.3.1.10.2-3.png, id=281, 181.67876pt x 238.8925pt>
-File: DSNE_3.3.1.10.2-3.png Graphic file (type png)
-<use DSNE_3.3.1.10.2-3.png>
-Package pdftex.def Info: DSNE_3.3.1.10.2-3.png  used on input line 348.
-(pdftex.def)             Requested size: 181.6783pt x 238.8919pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <./DSNE_3.3.1.10.2-1.png>]
+File: DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pdf Graphic file (type pdf)
+<use DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pdf>
+Package pdftex.def Info: DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pdf  used on i
+nput line 320.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./DSNE_3.3.1.10.2-3.png>] [9]
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 41
-1.
+[6 <./DSNE_Plot_3.3.1.10.2-1-eps-converted-to.pdf>] [7]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9] [10]
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 51
+2.
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd
 "
@@ -1300,84 +1322,212 @@ LaTeX Warning: Font shape declaration has incorrect series value `mc'.
                Found on input line 46.
 
 )
-<LayerDoseinSlab_vs_Depth.png, id=327, 264.99pt x 210.28563pt>
-File: LayerDoseinSlab_vs_Depth.png Graphic file (type png)
-<use LayerDoseinSlab_vs_Depth.png>
-Package pdftex.def Info: LayerDoseinSlab_vs_Depth.png  used on input line 417.
-(pdftex.def)             Requested size: 238.48878pt x 189.25531pt.
+Package epstopdf Info: Source file: <LayerDoseinSlab_vs_Depth.eps>
+(epstopdf)                    date: 2020-08-04 17:10:31
+(epstopdf)                    size: 59583 bytes
+(epstopdf)             Output file: <LayerDoseinSlab_vs_Depth-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2020-08-04 17:10:49
+(epstopdf)                    size: 20722 bytes
+(epstopdf)             Command: <epstopdf --outfile=LayerDoseinSlab_vs_Depth-ep
+s-converted-to.pdf LayerDoseinSlab_vs_Depth.eps>
+(epstopdf)             \includegraphics on input line 518.
+Package epstopdf Info: Output file is already uptodate.
 
+
+pdfTeX warning: pdflatex.exe (file ./LayerDoseinSlab_vs_Depth-eps-converted-to.
+pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+<LayerDoseinSlab_vs_Depth-eps-converted-to.pdf, id=382, 462.72874pt x 347.2975p
+t>
+File: LayerDoseinSlab_vs_Depth-eps-converted-to.pdf Graphic file (type pdf)
+<use LayerDoseinSlab_vs_Depth-eps-converted-to.pdf>
+Package pdftex.def Info: LayerDoseinSlab_vs_Depth-eps-converted-to.pdf  used on
+ input line 518.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
+Package epstopdf Info: Source file: <TotalDoseinSlab_vs_Thickness.eps>
+(epstopdf)                    date: 2020-08-04 16:53:02
+(epstopdf)                    size: 61200 bytes
+(epstopdf)             Output file: <TotalDoseinSlab_vs_Thickness-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2020-08-04 17:01:04
+(epstopdf)                    size: 21207 bytes
+(epstopdf)             Command: <epstopdf --outfile=TotalDoseinSlab_vs_Thicknes
+s-eps-converted-to.pdf TotalDoseinSlab_vs_Thickness.eps>
+(epstopdf)             \includegraphics on input line 528.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./TotalDoseinSlab_vs_Thickness-eps-converted
+-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
+owed
+<TotalDoseinSlab_vs_Thickness-eps-converted-to.pdf, id=385, 462.72874pt x 347.2
+975pt>
+File: TotalDoseinSlab_vs_Thickness-eps-converted-to.pdf Graphic file (type pdf)
+
+<use TotalDoseinSlab_vs_Thickness-eps-converted-to.pdf>
+Package pdftex.def Info: TotalDoseinSlab_vs_Thickness-eps-converted-to.pdf  use
+d on input line 528.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<TotalDoseinSlab_vs_Thickness.png, id=330, 263.48438pt x 219.31938pt>
-File: TotalDoseinSlab_vs_Thickness.png Graphic file (type png)
-<use TotalDoseinSlab_vs_Thickness.png>
-Package pdftex.def Info: TotalDoseinSlab_vs_Thickness.png  used on input line 4
-27.
-(pdftex.def)             Requested size: 237.13373pt x 197.3856pt.
+Package epstopdf Info: Source file: <Dose_vs_IonEnergy.eps>
+(epstopdf)                    date: 2020-08-04 17:00:24
+(epstopdf)                    size: 61108 bytes
+(epstopdf)             Output file: <Dose_vs_IonEnergy-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-08-04 17:01:05
+(epstopdf)                    size: 19090 bytes
+(epstopdf)             Command: <epstopdf --outfile=Dose_vs_IonEnergy-eps-conve
+rted-to.pdf Dose_vs_IonEnergy.eps>
+(epstopdf)             \includegraphics on input line 536.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Dose_vs_IonEnergy-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Dose_vs_IonEnergy-eps-converted-to.pdf, id=390, 462.72874pt x 347.2975pt>
+File: Dose_vs_IonEnergy-eps-converted-to.pdf Graphic file (type pdf)
+<use Dose_vs_IonEnergy-eps-converted-to.pdf>
+Package pdftex.def Info: Dose_vs_IonEnergy-eps-converted-to.pdf  used on input 
+line 536.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Dose_vs_IonEnergy.png, id=335, 242.9075pt x 168.63pt>
-File: Dose_vs_IonEnergy.png Graphic file (type png)
-<use Dose_vs_IonEnergy.png>
-Package pdftex.def Info: Dose_vs_IonEnergy.png  used on input line 435.
-(pdftex.def)             Requested size: 218.61472pt x 151.76558pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10] [11 <./LayerDoseinSlab_vs_Depth.png> <./TotalDoseinSlab_vs_Thickness.png>]
-
-Overfull \hbox (7.25421pt too wide) detected at line 458
+[11 <./LayerDoseinSlab_vs_Depth-eps-converted-to.pdf>] [12 <./TotalDoseinSlab_v
+s_Thickness-eps-converted-to.pdf> <./Dose_vs_IonEnergy-eps-converted-to.pdf>]
+Overfull \hbox (7.25421pt too wide) detected at line 559
 []\OML/cmm/m/it/10 D[]\U/matha/m/n/10 p\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; r[]\
 U/matha/m/n/10 q  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 D[]\U/matha/m/n/10 p\OML/c
 mm/m/it/10 r[]\U/matha/m/n/10 q [] \OML/cmm/m/it/10 :
  []
 
-<LayerDoseinSphere_vs_Depth.png, id=362, 314.17375pt x 210.28563pt>
-File: LayerDoseinSphere_vs_Depth.png Graphic file (type png)
-<use LayerDoseinSphere_vs_Depth.png>
-Package pdftex.def Info: LayerDoseinSphere_vs_Depth.png  used on input line 464
-.
-(pdftex.def)             Requested size: 282.75375pt x 189.25531pt.
+Package epstopdf Info: Source file: <LayerDoseinSphere_vs_Depth.eps>
+(epstopdf)                    date: 2020-08-04 17:10:11
+(epstopdf)                    size: 39967 bytes
+(epstopdf)             Output file: <LayerDoseinSphere_vs_Depth-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2020-08-04 17:10:50
+(epstopdf)                    size: 17835 bytes
+(epstopdf)             Command: <epstopdf --outfile=LayerDoseinSphere_vs_Depth-
+eps-converted-to.pdf LayerDoseinSphere_vs_Depth.eps>
+(epstopdf)             \includegraphics on input line 565.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./LayerDoseinSphere_vs_Depth-eps-converted-t
+o.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
+ed
+<LayerDoseinSphere_vs_Depth-eps-converted-to.pdf, id=563, 462.72874pt x 347.297
+5pt>
+File: LayerDoseinSphere_vs_Depth-eps-converted-to.pdf Graphic file (type pdf)
+<use LayerDoseinSphere_vs_Depth-eps-converted-to.pdf>
+Package pdftex.def Info: LayerDoseinSphere_vs_Depth-eps-converted-to.pdf  used 
+on input line 565.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<TotalDoseinSphere_vs_Thickness.png, id=363, 313.17pt x 219.82124pt>
-File: TotalDoseinSphere_vs_Thickness.png Graphic file (type png)
-<use TotalDoseinSphere_vs_Thickness.png>
-Package pdftex.def Info: TotalDoseinSphere_vs_Thickness.png  used on input line
- 470.
-(pdftex.def)             Requested size: 281.85037pt x 197.83728pt.
+Package epstopdf Info: Source file: <TotalDoseinSphere_vs_Thickness.eps>
+(epstopdf)                    date: 2020-08-04 17:14:32
+(epstopdf)                    size: 54109 bytes
+(epstopdf)             Output file: <TotalDoseinSphere_vs_Thickness-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2020-08-04 17:15:11
+(epstopdf)                    size: 19712 bytes
+(epstopdf)             Command: <epstopdf --outfile=TotalDoseinSphere_vs_Thickn
+ess-eps-converted-to.pdf TotalDoseinSphere_vs_Thickness.eps>
+(epstopdf)             \includegraphics on input line 571.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./TotalDoseinSphere_vs_Thickness-eps-convert
+ed-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> a
+llowed
+<TotalDoseinSphere_vs_Thickness-eps-converted-to.pdf, id=564, 462.72874pt x 347
+.2975pt>
+File: TotalDoseinSphere_vs_Thickness-eps-converted-to.pdf Graphic file (type pd
+f)
+<use TotalDoseinSphere_vs_Thickness-eps-converted-to.pdf>
+Package pdftex.def Info: TotalDoseinSphere_vs_Thickness-eps-converted-to.pdf  u
+sed on input line 571.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./Dose_vs_IonEnergy.png>] [13 <./LayerDoseinSphere_vs_Depth.png> <./TotalD
-oseinSphere_vs_Thickness.png>]
-<Dose_vs_shielding_slab_comparison.png, id=381, 272.01625pt x 181.67876pt>
-File: Dose_vs_shielding_slab_comparison.png Graphic file (type png)
-<use Dose_vs_shielding_slab_comparison.png>
-Package pdftex.def Info: Dose_vs_shielding_slab_comparison.png  used on input l
-ine 497.
-(pdftex.def)             Requested size: 244.81235pt x 163.50935pt.
+[13] [14 <./LayerDoseinSphere_vs_Depth-eps-converted-to.pdf> <./TotalDoseinSphe
+re_vs_Thickness-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Dose_vs_shielding_slab_comparison.eps>
+(epstopdf)                    date: 2020-08-04 17:30:08
+(epstopdf)                    size: 62270 bytes
+(epstopdf)             Output file: <Dose_vs_shielding_slab_comparison-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2020-08-04 17:24:44
+(epstopdf)                    size: 22239 bytes
+(epstopdf)             Command: <epstopdf --outfile=Dose_vs_shielding_slab_comp
+arison-eps-converted-to.pdf Dose_vs_shielding_slab_comparison.eps>
+(epstopdf)             \includegraphics on input line 598.
+runsystem(epstopdf --outfile=Dose_vs_shielding_slab_comparison-eps-converted-to
+.pdf Dose_vs_shielding_slab_comparison.eps)...executed (allowed).
 
-Overfull \hbox (5.35564pt too wide) in paragraph at lines 501--502
+Package epstopdf Info: Result file: <Dose_vs_shielding_slab_comparison-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2020-08-04 17:31:11
+(epstopdf)                    size: 22902 bytes.
+
+
+pdfTeX warning: pdflatex.exe (file ./Dose_vs_shielding_slab_comparison-eps-conv
+erted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
+> allowed
+<Dose_vs_shielding_slab_comparison-eps-converted-to.pdf, id=683, 462.72874pt x 
+347.2975pt>
+File: Dose_vs_shielding_slab_comparison-eps-converted-to.pdf Graphic file (type
+ pdf)
+<use Dose_vs_shielding_slab_comparison-eps-converted-to.pdf>
+Package pdftex.def Info: Dose_vs_shielding_slab_comparison-eps-converted-to.pdf
+  used on input line 598.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
+
+Overfull \hbox (5.35564pt too wide) in paragraph at lines 602--603
 []\OT1/phv/m/n/10 The doses com-puted in SRIM are con-sis-tently over-es-ti-mat
 ed com-pared with SHIEL-
  []
 
 
-Overfull \hbox (0.10817pt too wide) in paragraph at lines 501--502
+Overfull \hbox (0.10817pt too wide) in paragraph at lines 602--603
 \OT1/phv/m/n/10 D-OSE2, which is a con-se-quence of low-resolution sam-pling of
  the energy-angle space
  []
 
-<Dose_vs_shielding_sphere_comparison.png, id=383, 266.49562pt x 171.64125pt>
-File: Dose_vs_shielding_sphere_comparison.png Graphic file (type png)
-<use Dose_vs_shielding_sphere_comparison.png>
-Package pdftex.def Info: Dose_vs_shielding_sphere_comparison.png  used on input
- line 505.
-(pdftex.def)             Requested size: 239.84384pt x 154.47568pt.
+Package epstopdf Info: Source file: <Dose_vs_shielding_sphere_comparison.eps>
+(epstopdf)                    date: 2020-08-04 17:30:37
+(epstopdf)                    size: 61283 bytes
+(epstopdf)             Output file: <Dose_vs_shielding_sphere_comparison-eps-co
+nverted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=Dose_vs_shielding_sphere_co
+mparison-eps-converted-to.pdf Dose_vs_shielding_sphere_comparison.eps>
+(epstopdf)             \includegraphics on input line 606.
+runsystem(epstopdf --outfile=Dose_vs_shielding_sphere_comparison-eps-converted-
+to.pdf Dose_vs_shielding_sphere_comparison.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Dose_vs_shielding_sphere_comparison-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2020-08-04 17:31:12
+(epstopdf)                    size: 22598 bytes.
+
+
+pdfTeX warning: pdflatex.exe (file ./Dose_vs_shielding_sphere_comparison-eps-co
+nverted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<Dose_vs_shielding_sphere_comparison-eps-converted-to.pdf, id=685, 462.72874pt 
+x 347.2975pt>
+File: Dose_vs_shielding_sphere_comparison-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+<use Dose_vs_shielding_sphere_comparison-eps-converted-to.pdf>
+Package pdftex.def Info: Dose_vs_shielding_sphere_comparison-eps-converted-to.p
+df  used on input line 606.
+(pdftex.def)             Requested size: 281.25pt x 211.09335pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1389,7 +1539,7 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmis
 c.sty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-) [14 <./Dose_vs_shielding_slab_comparison.png>]
+) [15 <./Dose_vs_shielding_slab_comparison-eps-converted-to.pdf>]
 ("Hydrogen in Glass Composite.txt"
 LaTeX Font Info:    Trying to load font information for OML+phv on input line 2
 .
@@ -1409,10 +1559,10 @@ File: omsphv.fd
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
- [15 <./Dose_vs_shielding_sphere_comparison.png>] [16] [17])
-("Hydrogen in Aramid Composite.txt" [18] [19] [20])
-("Hydrogen in Carbon Composite.txt" [21] [22] [23]) ("Hydrogen in Aluminum.txt"
-[24] [25] [26]) (../ESP-PSYCHIC_SPE-worst_case_1yr.txt
+ [16 <./Dose_vs_shielding_sphere_comparison-eps-converted-to.pdf>] [17]
+[18]) ("Hydrogen in Aramid Composite.txt" [19] [20] [21])
+("Hydrogen in Carbon Composite.txt" [22] [23] [24]) ("Hydrogen in Aluminum.txt"
+[25] [26] [27]) (../ESP-PSYCHIC_SPE-worst_case_1yr.txt
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
 .
 
@@ -1435,34 +1585,34 @@ LaTeX Warning: Font shape declaration has incorrect series value `mc'.
                It should not contain an `m'! Please correct it.
                Found on input line 34.
 
-) [27] [28] [29] [30] [31]) (../Dose_SPE-worst_case_1yr-sphere.txt [32])
-(../Dose_SPE-worst_case_1yr-slab.txt) [33]
+) [28] [29] [30] [31] [32]) (../Dose_SPE-worst_case_1yr-sphere.txt [33])
+(../Dose_SPE-worst_case_1yr-slab.txt [34]) [35]
 (Radiation_on_composites-DeStefano.bbl)
 
-Package caption Warning: Unused \captionsetup[sub] on input line 25.
+Package caption Warning: Unused \captionsetup[sub] on input line 28.
 See the caption package documentation for explanation.
 
-[34
+[36
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 552.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 552.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 653.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 653.
  (Radiation_on_composites-DeStefano.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 552.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 552.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 653.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 653.
 Package rerunfilecheck Info: File `Radiation_on_composites-DeStefano.out' has n
 ot changed.
-(rerunfilecheck)             Checksum: 88E9151A82C646DCB159ED4313AB7FBB;1124.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 552.
+(rerunfilecheck)             Checksum: 4414AD196DA07DF568D561BFAB9C6885;1124.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 653.
  ) 
 Here is how much of TeX's memory you used:
- 35712 strings out of 481292
- 832288 string characters out of 2906380
- 2061649 words of memory out of 3000000
- 49452 multiletter control sequences out of 15000+200000
+ 35791 strings out of 481292
+ 834141 string characters out of 2906380
+ 2052787 words of memory out of 3000000
+ 49522 multiletter control sequences out of 15000+200000
  564960 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,98p,998b,2427s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,14n,98p,998b,2427s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\adestefa\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/d
 pi600\matha6.pk> <C:\Users\adestefa\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/pu
 blic/mathabx/dpi600\matha8.pk> <C:\Users\adestefa\AppData\Local\MiKTeX\2.9\font
@@ -1488,10 +1638,10 @@ nts/cm/cmtt8.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/urw/helvetic/uhvb8a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/adestefa/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Radiation_on_composites-DeStefano.pdf (37 pages, 798347 bytes
+Output written on Radiation_on_composites-DeStefano.pdf (39 pages, 633771 bytes
 ).
 PDF statistics:
- 1855 PDF objects out of 2073 (max. 8388607)
- 1144 named destinations out of 1200 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2255 PDF objects out of 2487 (max. 8388607)
+ 1147 named destinations out of 1200 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

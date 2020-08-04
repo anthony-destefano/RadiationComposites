@@ -10,6 +10,9 @@
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \lstset{  breaklines=true, numbers=left, numberstyle=\tiny\color{mygray}, keepspaces=true }
 
+%https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex
+\usepackage{epsfig}
+
 \usepackage{siunitx} %https://tex.stackexchange.com/questions/413312/how-to-put-angstrom/413317
 
 \usepackage{titlesec}
@@ -36,6 +39,10 @@
 	citecolor={blue!50!black},
 	urlcolor={blue!80!black}
 }
+
+\usepackage{color, colortbl}
+\definecolor{DSNE-Blue}{rgb}{0.773, 0.848, 0.941}
+\definecolor{DSNE-Gray}{rgb}{0.848, 0.848, 0.848}
 
 \titleclass{\subsubsubsection}{straight}[\subsection]
 
@@ -306,13 +313,69 @@ Two versions of MLI are constructed to simulate a finite amount of shielding in 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Radiation Environment}
 
-The leading radiation environment in interplanetary space is often due to solar energetic particles (SEPs) from solar particle events (SPEs). The geomagnetically unshielded SPE environment is used from SLS-SPEC-159 Design Specification for Natural Environments (DSNE), found in Table 3.3.1.10.2-1, also shown here in Figure~\ref{fig:DSNE_UnshieldedSPEFlux}. The environment is generated using SPENVIS, employing the ESP/PSYCHIC model. The worst case SPE option is used for an override of 1 year with only protons. Output generated from SPENVIS can be found in Listing \ref{lst:SPEworstcase} of Appendix \ref{asec:SPENVISOutput}.
+The leading radiation environment in interplanetary space is often due to solar energetic particles (SEPs) from solar particle events (SPEs). The geomagnetically unshielded SPE environment is used from SLS-SPEC-159 Design Specification for Natural Environments (DSNE), found in Table 3.3.1.10.2-1, also shown here in Table~\ref{tab:DSNE_Plot_3.3.1.10.2-1} and plotted in Figure \ref{fig:DSNE_Plot_3.3.1.10.2-1}. The environment is generated using SPENVIS, employing the ESP/PSYCHIC model. The worst case SPE option is used for an override of 1~year with only protons. Output generated from SPENVIS can be found in Listing \ref{lst:SPEworstcase} of Appendix \ref{asec:SPENVISOutput}.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=1.0]{DSNE_3.3.1.10.2-1.png}
-	\caption{The unshielded SPE integral and differential fluence as defined in DSNE.}\label{fig:DSNE_UnshieldedSPEFlux}
+	\includegraphics[width=0.75\textwidth]{DSNE_Plot_3.3.1.10.2-1.eps}
+	\caption{The unshielded SPE integral and differential flux as shown in DSNE Figure~3.3.1.10.2-1.}\label{fig:DSNE_Plot_3.3.1.10.2-1}
 \end{figure}
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[scale=1.0]{DSNE_3.3.1.10.2-1.png}
+%	\caption{The unshielded SPE integral and differential fluence as defined in DSNE.}\label{tab:DSNE_Plot_3.3.1.10.2-1}
+%\end{figure}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+		\caption{The unshielded SPE integral and differential flux as defined in DSNE Table~3.3.1.10.2-1.}
+	\label{tab:DSNE_Plot_3.3.1.10.2-1}\centering
+	\resizebox{0.8\textwidth}{!}{%
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor{DSNE-Blue} 
+			\textbf{Proton Energy} & \textbf{Unshielded SPE} & \textbf{Unshielded SPE} \\ 
+			\rowcolor{DSNE-Blue}  & \textbf{Integral Fluence per year} & \textbf{Differential Fluence per year} \\ \hline
+			\rowcolor{DSNE-Gray} 
+			\textbf{MeV} & \textbf{protons/cm$^2$} & \textbf{protons/MeV-cm$^2$} \\ \hline
+			1.00E-01 & 4.93E+11 & 2.83E+12 \\ \hline
+			2.50E-01 & 2.89E+11 & 6.79E+11 \\ \hline
+			5.00E-01 & 1.93E+11 & 2.26E+11 \\ \hline
+			1.00E+00 & 1.29E+11 & 7.56E+10 \\ \hline
+			2.00E+00 & 8.63E+10 & 2.53E+10 \\ \hline
+			3.50E+00 & 6.14E+10 & 1.20E+10 \\ \hline
+			5.00E+00 & 4.83E+10 & 7.28E+09 \\ \hline
+			7.10E+00 & 3.58E+10 & 4.94E+09 \\ \hline
+			8.00E+00 & 3.13E+10 & 4.43E+09 \\ \hline
+			9.00E+00 & 2.75E+10 & 3.45E+09 \\ \hline
+			1.00E+01 & 2.44E+10 & 2.68E+09 \\ \hline
+			1.60E+01 & 1.51E+10 & 9.33E+08 \\ \hline
+			1.80E+01 & 1.35E+10 & 7.17E+08 \\ \hline
+			2.00E+01 & 1.22E+10 & 6.51E+08 \\ \hline
+			2.50E+01 & 9.32E+09 & 4.55E+08 \\ \hline
+			3.50E+01 & 6.04E+09 & 2.59E+08 \\ \hline
+			4.00E+01 & 4.84E+09 & 2.10E+08 \\ \hline
+			4.50E+01 & 3.94E+09 & 1.59E+08 \\ \hline
+			5.00E+01 & 3.25E+09 & 1.26E+08 \\ \hline
+			7.10E+01 & 1.51E+09 & 5.10E+07 \\ \hline
+			8.00E+01 & 1.12E+09 & 3.72E+07 \\ \hline
+			9.00E+01 & 8.19E+08 & 2.48E+07 \\ \hline
+			1.00E+02 & 6.28E+08 & 1.57E+07 \\ \hline
+			1.60E+02 & 2.09E+08 & 3.31E+06 \\ \hline
+			1.80E+02 & 1.56E+08 & 2.23E+06 \\ \hline
+			2.00E+02 & 1.20E+08 & 1.56E+06 \\ \hline
+			2.50E+02 & 6.72E+07 & 7.44E+05 \\ \hline
+			4.00E+02 & 1.83E+07 & 1.33E+05 \\ \hline
+			5.00E+02 & 9.89E+06 & 4.94E+04 \\ \hline
+		\end{tabular}%
+	}
+
+\end{table}
 
 The SPE integral flux can be fit using a Weibull function, given by
 \begin{equation}
@@ -331,7 +394,8 @@ Other SPE definitions may also be generated directly from the October 1989 SPE, 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dose Estimation}
 
-Given the limited information available, the total ionizing dose (TID) is estimated in composites. The zeroth order estimation uses the DSNE SPE TID tables, which must assume a finite shielding thickness, shown in Section \ref{ssec:DSNEwithShielding}. A first order approximation is done by computing dose-depth curves in composites for various energies and incident angles, shown in Section \ref{ssec:SRIMnoShielding}.
+Given the limited information available, the total ionizing dose (TID) is estimated in composites. The zeroth order estimation uses the DSNE SPE TID tables (see Figure~\ref{fig:DSNE_Plot_3.3.1.10.2-1} for a plot), which must assume a finite shielding thickness, shown in Section \ref{ssec:DSNEwithShielding}. A first order approximation is done by computing dose-depth curves in composites for various energies and incident angles, shown in Section \ref{ssec:SRIMnoShielding}.
+
 
 Interestingly, using the DSNE tables, the conservative dose estimate assuming at least 3 mils of aluminum shielding is $7.59E4$ rads (which $3$ mils of shielding is outside the validity range of SHIELDOSE2, and the dose is in silicon), whereas the dose estimate using SRIM with no shielding in a carbon composite is $6.94E4$ rads. Half of the TID is deposited in the first $\sim15$ mils of composite material.
 
@@ -341,20 +405,57 @@ Using Figure \ref{fig:Dose_vs_IonEnergy} it can be concluded that the $3$ mils o
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DSNE with Shielding}\label{ssec:DSNEwithShielding}
 
-To use the DSNE to estimate dose in composites, a finite shielding layer is forced on the analysis\footnote{The DSNE TID tables in concern were developed using SHEILDOSE2, which implicitly assumes a finite range of shielding thicknesses.}. TID produced by DSNE Table 3.3.1.10.2-1 (Figure \ref{fig:DSNE_UnshieldedSPEFlux}) can be found in DSNE Table 3.3.1.10.2-3, also shown here in Figure \ref{fig:DSNE_UnshieldedSPETID}.
+To use the DSNE to estimate dose in composites, a finite shielding layer is forced on the analysis\footnote{The DSNE TID tables in concern were developed using SHEILDOSE2, which implicitly assumes a finite range of shielding thicknesses.}. TID produced by DSNE Table 3.3.1.10.2-1 (Table \ref{tab:DSNE_Plot_3.3.1.10.2-1}) can be found in DSNE Table 3.3.1.10.2-3, also shown here in Table \ref{tab:DSNE_UnshieldedSPETID}.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=1.0]{DSNE_3.3.1.10.2-3.png}
-	\caption{The TID in silicon as a function of aluminum shielding from unshielded SPE fluence as defined in DSNE.}\label{fig:DSNE_UnshieldedSPETID}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[scale=1.0]{DSNE_3.3.1.10.2-3.png}
+%	\caption{The TID in silicon as a function of aluminum shielding from unshielded SPE fluence as defined in DSNE.}\label{tab:DSNE_UnshieldedSPETID}
+%\end{figure}
 
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[h]
+	\caption{The TID in silicon as a function of aluminum shielding from unshielded SPE fluence as defined in DSNE Table~3.3.1.10.2-3.}
+	\label{tab:DSNE_UnshieldedSPETID}\centering
+	\resizebox{0.45\textwidth}{!}{%
+		\begin{tabular}{|c|c|}
+			\hline
+			\rowcolor{DSNE-Blue} \textbf{Aluminum Shield Depth} & \textbf{Total SPE TID} \\ \hline
+			\rowcolor{DSNE-Gray} \textbf{mm} & \textbf{cGy(Si)/year} \\ \hline
+			1.00E-02 & 3.41E+05 \\ \hline
+			2.50E-02 & 1.69E+05 \\ \hline
+			5.00E-02 & 1.03E+05 \\ \hline
+			1.00E-01 & 6.43E+04 \\ \hline
+			2.00E-01 & 4.01E+04 \\ \hline
+			3.00E-01 & 3.00E+04 \\ \hline
+			4.00E-01 & 2.33E+04 \\ \hline
+			5.00E-01 & 1.84E+04 \\ \hline
+			6.00E-01 & 1.50E+04 \\ \hline
+			8.00E-01 & 1.11E+04 \\ \hline
+			1.00E+00 & 8.83E+03 \\ \hline
+			2.50E+00 & 3.91E+03 \\ \hline
+			5.00E+00 & 1.97E+03 \\ \hline
+			1.00E+01 & 8.87E+02 \\ \hline
+			1.20E+01 & 7.03E+02 \\ \hline
+			1.40E+01 & 5.57E+02 \\ \hline
+			1.60E+01 & 4.53E+02 \\ \hline
+			1.80E+01 & 3.77E+02 \\ \hline
+			2.00E+01 & 3.18E+02 \\ \hline
+			3.00E+01 & 1.50E+02 \\ \hline
+			5.00E+01 & 5.97E+01 \\ \hline
+			7.50E+01 & 2.94E+01 \\ \hline
+			1.00E+02 & 1.73E+01 \\ \hline
+		\end{tabular}%
+	}
+\end{table}
 The principle idea to compute dose in a composite using DSNE is to first compute the dose with only a thin amount of shielding. In this analysis, two thicknesses of MLI have been considered ($11.1$ and $3.05$ mils of aluminum equivalent thickness), shown in Table \ref{tab:al_equiv_MLI}. Dose in silicon after this MLI shielding is denoted by $D_{\text{MLI}}$. The next step is to add the thickness of the MLI layer and the composite layer (Table \ref{tab:thickness_comp}, spanning 31.5 to 748 mils of composite) as a single layer of aluminum equivalent thickness and compute the dose, $D_{\text{MLI+Composite}}$. The dose in only the composite is then computed by the difference between these two doses,
 \begin{equation}
 D_{\text{composite}} = D_{\text{MLI}} - D_{\text{MLI+Composite}}.
 \end{equation}
 
-To compute a dose $D_{\text{layer}}$ from DSNE Table 3.3.1.10.2-3 (Figure \ref{fig:DSNE_UnshieldedSPETID}), a power law interpolation scheme can be used to estimate dose for a shielding thickness $x_{\text{layer}}$ between two rows in the table. The interpolation scheme for the layer dose is given by
+To compute a dose $D_{\text{layer}}$ from DSNE Table 3.3.1.10.2-3 (Table \ref{tab:DSNE_UnshieldedSPETID}), a power law interpolation scheme can be used to estimate dose for a shielding thickness $x_{\text{layer}}$ between two rows in the table. The interpolation scheme for the layer dose is given by
 \begin{equation}
 D_{\text{layer}} = D_i\left(\frac{D_{i+1}}{D_i}\right)^{\frac{\log(x_{\text{layer}}/x_i)}{\log(x_{i+1}/x_i})},
 \end{equation}
@@ -387,7 +488,7 @@ The isotropic flux for a particular energy and incident angle $\Phi(E,\theta)$ c
 \begin{equation}
 \Phi(E,\theta) = [\Phi(E_i) - \Phi(E_{i+1})] \frac{\cos(2\theta_i) - \cos(2\theta_{i+1})}{2},
 \end{equation}
-where $E = \sqrt{E_i E_{i+1}}$, $\theta = (\theta_i + \theta_{i+1})/2$, and $\Phi(E_i)$ is the integral flux at energy $E_i$ (e.g., DSNE Table 3.3.1.10.2-1, or Figure \ref{fig:DSNE_UnshieldedSPEFlux}). The TRIM simulation is ran using $E$ and $\theta$ as centered values in the energy-angle bin. The anglular weight term follows from the integral
+where $E = \sqrt{E_i E_{i+1}}$, $\theta = (\theta_i + \theta_{i+1})/2$, and $\Phi(E_i)$ is the integral flux at energy $E_i$ (e.g., DSNE Table 3.3.1.10.2-1, or Table \ref{tab:DSNE_Plot_3.3.1.10.2-1}). The TRIM simulation is ran using $E$ and $\theta$ as centered values in the energy-angle bin. The anglular weight term follows from the integral
 \begin{equation}
 w_i = 2\int_{\theta_i}^{\theta_{i+1}}d\theta\sin\theta\cos\theta = \frac{\cos(2\theta_i) - \cos(2\theta_{i+1})}{2},
 \end{equation}
@@ -414,8 +515,8 @@ where $\rho$ is the material density in units of kg cm$^{-3}$. The dose as a fun
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{LayerDoseinSlab_vs_Depth.png}
-	\caption{Dose per 0.2 mm as a function of depth in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.}\label{fig:LayerDoseinSlab_vs_Depth}
+	\includegraphics[width=0.75\textwidth]{LayerDoseinSlab_vs_Depth.eps}
+	\caption{Dose in carbon composite per 0.2 mm as a function of depth in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.}\label{fig:LayerDoseinSlab_vs_Depth}
 \end{figure}
 
 The dose-depth profile in a carbon composite is shown in Figure \ref{fig:LayerDoseinSlab_vs_Depth} for a composite thickness of $20$ mm. Artifacts can be seen at larger depth since a finite number of energies were probed. The spikes are due to individual Bragg peaks. With a greater number of energies probed, these spikes would be smoothed out.
@@ -424,7 +525,7 @@ Another way to look at the dose profile is total dose as a function of thickness
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{TotalDoseinSlab_vs_Thickness.png}
+	\includegraphics[width=0.75\textwidth]{TotalDoseinSlab_vs_Thickness.eps}
 	\caption{Total dose as a function of carbon composite thickness in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.}\label{fig:TotalDoseinSlab_vs_Thickness}
 \end{figure}
 
@@ -432,7 +533,7 @@ The dose as a function of ion energy is given in Figure \ref{fig:Dose_vs_IonEner
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{Dose_vs_IonEnergy.png}
+	\includegraphics[width=0.75\textwidth]{Dose_vs_IonEnergy.eps}
 	\caption{Dose per 0.1 MeV as a function of ion energy using DSNE Table 3.3.1.10.2-1 as the ion environment.}\label{fig:Dose_vs_IonEnergy}
 \end{figure}
 
@@ -461,13 +562,13 @@ After resampling the depth bins to a lower resolution to avoid the artifact jump
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{LayerDoseinSphere_vs_Depth.png}
+	\includegraphics[width=0.75\textwidth]{LayerDoseinSphere_vs_Depth.eps}
 	\caption{Dose per 0.2 mm as a function of depth in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.}\label{fig:LayerDoseinSphere_vs_Depth}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{TotalDoseinSphere_vs_Thickness.png}
+	\includegraphics[width=0.75\textwidth]{TotalDoseinSphere_vs_Thickness.eps}
 	\caption{Total dose as a function of carbon composite thickness in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.}\label{fig:TotalDoseinSphere_vs_Thickness}
 \end{figure}
 
@@ -478,7 +579,7 @@ From Figure \ref{fig:TotalDoseinSphere_vs_Thickness}, the TID absorbed by $20$ m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SRIM Comparison with DSNE (SHIELDOSE2)}
 
-The doses computed in SRIM are compared with DSNE Table 3.3.1.10.2-3 (see Figure \ref{fig:DSNE_UnshieldedSPETID}). First, the SRIM doses are computed in a slab using the SPE worst case 1 year environment (DSNE Table 3.3.1.10.2-1) and are compared with doses computed in SPENVIS. The same exact set of knobs is used in computing DSNE Table~3.3.1.10.2-3, except the \textsf{slab} option is used instead. It doesn't matter whether a finite or infinite slab is used. Both were checked and there were no differences with this particular energy spectrum and ion (protons). The SRIM doses in a slab and sphere are summarized in Table \ref{tab:SRIM_doses} and comparisons with SHIELDOSE2 (see Appendix \ref{asec:SPENVISOutput}) are shown in Figure \ref{fig:Dose_vs_shielding_slab_comparison}.
+The doses computed in SRIM are compared with DSNE Table 3.3.1.10.2-3 (see Table \ref{tab:DSNE_UnshieldedSPETID}). First, the SRIM doses are computed in a slab using the SPE worst case 1 year environment (DSNE Table 3.3.1.10.2-1) and are compared with doses computed in SPENVIS. The same exact set of knobs is used in computing DSNE Table~3.3.1.10.2-3, except the \textsf{slab} option is used instead. It doesn't matter whether a finite or infinite slab is used. Both were checked and there were no differences with this particular energy spectrum and ion (protons). The SRIM doses in a slab and sphere are summarized in Table \ref{tab:SRIM_doses} and comparisons with SHIELDOSE2 (see Appendix \ref{asec:SPENVISOutput}) are shown in Figure \ref{fig:Dose_vs_shielding_slab_comparison}.
 
 \begin{table}[h]\centering
 	\caption{Dose to silicon in slab and spherical geometric as a function of aluminum shielding thickness. Equation \eqref{eq:seltzer86_Eq9-powerlawDose2} was used to convert slab doses to sphere doses.}\label{tab:SRIM_doses}
@@ -494,7 +595,7 @@ The doses computed in SRIM are compared with DSNE Table 3.3.1.10.2-3 (see Figure
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{Dose_vs_shielding_slab_comparison.png}
+	\includegraphics[width=0.75\textwidth]{Dose_vs_shielding_slab_comparison.eps}
 	\caption{Comparison between slab dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.}\label{fig:Dose_vs_shielding_slab_comparison}
 \end{figure}
 
@@ -502,7 +603,7 @@ The doses computed in SRIM are consistently overestimated compared with SHIELDOS
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{Dose_vs_shielding_sphere_comparison.png}
+	\includegraphics[width=0.75\textwidth]{Dose_vs_shielding_sphere_comparison.eps}
 	\caption{Comparison between sphere dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.}\label{fig:Dose_vs_shielding_sphere_comparison}
 \end{figure}
 

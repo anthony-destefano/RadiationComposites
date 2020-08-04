@@ -8,11 +8,11 @@
 \contentsline {subsubsection}{\numberline {3.1.4}Proton Stopping Distance}{2}{subsubsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.2}Multi-layered Insulation (MLI)}{5}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Radiation Environment}{6}{section.4}%
-\contentsline {section}{\numberline {5}Dose Estimation}{6}{section.5}%
-\contentsline {subsection}{\numberline {5.1}DSNE with Shielding}{7}{subsection.5.1}%
+\contentsline {section}{\numberline {5}Dose Estimation}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}DSNE with Shielding}{8}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}SRIM without Shielding}{9}{subsection.5.2}%
 \contentsline {section}{\numberline {6}SRIM Comparison with DSNE (SHIELDOSE2)}{13}{section.6}%
-\contentsline {section}{Appendix}{14}{figure.caption.22}%
-\contentsline {section}{\numberline {A}Ion Stopping and Range Tables}{15}{appendix.A}%
-\contentsline {section}{\numberline {B}SPENVIS Output}{27}{appendix.B}%
-\contentsline {section}{References}{34}{section*.23}%
+\contentsline {section}{Appendix}{15}{figure.caption.23}%
+\contentsline {section}{\numberline {A}Ion Stopping and Range Tables}{16}{appendix.A}%
+\contentsline {section}{\numberline {B}SPENVIS Output}{28}{appendix.B}%
+\contentsline {section}{References}{36}{section*.24}%

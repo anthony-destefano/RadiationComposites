@@ -1,0 +1,7 @@
+#Dose in Slab (SRIM)	
+#Al thickness [mm]	Dose [rad]
+1.00E-02	1.57E+05
+1.00E-01	3.31E+04
+1.00E+00	3.52E+03
+1.00E+01	2.73E+02
+1.00E+02	4.54E+00
