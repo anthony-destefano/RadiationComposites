@@ -101,18 +101,22 @@
 \pagenumbering{arabic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Executive Summary}
-%
-%
-%
-%\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Executive Summary}
 
+The Human Landing System (HLS) program is underway competing Appendix H (App~H) between three contractors: Blue Federation, Dynetics, and SpaceX. Through App~H, the contractors are to design and integrate a complete human lunar landing system for a 2024 landing at the south pole of the Moon. There is much interest in saving mass to bring to the lunar surface. One solution is to use composite materials. However, the use of composite materials in deep space has not been studied well, especially under a human spaceflight program. Therefore, the analysis and study outlined below is an attempt at quantifying the expected worst-case total ionizing dose (TID) to bare composite layers that experience a representative solar particle event environment as defined in SLS-SPEC 159 Cross-Program Design Specification for Natural Environments, also known as DSNE.
+
+Currently, the analysis makes many assumptions about material properties, see Section \ref{ssec:composites}. No information was given about specific composite materials, such as composition, density, matrix build-up, etc. Some placeholder information was provided. Unless very exotic materials and layering is used, it is assumed that the results hold within an order of magnitude in TID.
+
+Two attempts at quantifying the TID were done. The first was to use dose tables in DSNE as a guideline, Section \ref{ssec:DSNEwithShielding}. The worst-case results gave a TID of 7.594E4 rads/year in silicon, with $3$ mils of aluminum shielding. If the shielding assumption is removed (employing analysis done in Section \ref{sssec:ProtonStoppingDistance}) and the dose in silicon is converted to dose in carbon composite, the estimated TID increases to at least 9.5E4 rads/year (by as much as $\sim 25\%$).
+
+The second attempt employs the SRIM 2013 software package, Section \ref{ssec:SRIMnoShielding}, in order to transport a particular ion environment through user-defined materials. The same SPE environment (Section \ref{sec:RadiationEnvironment}) as in the DSNE dose estimation was used in the SRIM analysis. With assuming no shielding \textit{a priori} and using representative stoichiometric data for the composites, the estimated TID in a slab and in a sphere of carbon composite are 2.45E4 rads/year and 6.94E4 rads/year, respectively. When comparing these results with the DSNE dose table estimates, the TID in a sphere should be used.
+
+A true comparison between DSNE and SRIM was made in Section \ref{sec:SRIMvsDSNE}. Even though only normally incident fluxes were used in SRIM for this analysis due to limited time, the TID results show good agreement (throughout 4 decades of shielding thicknesses and 4 decades of ion energies) with DSNE dose tables for aluminum shielding and dose in silicon.
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+%\section{Introduction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -311,7 +315,7 @@ Two versions of MLI are constructed to simulate a finite amount of shielding in 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Radiation Environment}
+\section{Radiation Environment}\label{sec:RadiationEnvironment}
 
 The leading radiation environment in interplanetary space is often due to solar energetic particles (SEPs) from solar particle events (SPEs). The geomagnetically unshielded SPE environment is used from SLS-SPEC-159 Design Specification for Natural Environments (DSNE), found in Table 3.3.1.10.2-1, also shown here in Table~\ref{tab:DSNE_Plot_3.3.1.10.2-1} and plotted in Figure \ref{fig:DSNE_Plot_3.3.1.10.2-1}. The environment is generated using SPENVIS, employing the ESP/PSYCHIC model. The worst case SPE option is used for an override of 1~year with only protons. Output generated from SPENVIS can be found in Listing \ref{lst:SPEworstcase} of Appendix \ref{asec:SPENVISOutput}.
 
@@ -394,16 +398,16 @@ Other SPE definitions may also be generated directly from the October 1989 SPE, 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dose Estimation}
 
-Given the limited information available, the total ionizing dose (TID) is estimated in composites. The zeroth order estimation uses the DSNE SPE TID tables (see Figure~\ref{fig:DSNE_Plot_3.3.1.10.2-1} for a plot), which must assume a finite shielding thickness, shown in Section \ref{ssec:DSNEwithShielding}. A first order approximation is done by computing dose-depth curves in composites for various energies and incident angles, shown in Section \ref{ssec:SRIMnoShielding}.
+Given the limited information available, the total ionizing dose (TID) is estimated in composites. The zeroth order estimation uses the DSNE SPE TID tables (see Figure~\ref{fig:DSNE_Plot_3.3.1.10.2-1} for a plot), which must assume a finite shielding thickness, shown in Section \ref{ssec:DSNEwithShielding}. A first order approximation is done by computing dose-depth curves in composites for various energies and incident angles, shown in Section \ref{ssec:SRIMnoShielding}, using SRIM \citep{ziegler2009srim}.
 
 
-Interestingly, using the DSNE tables, the conservative dose estimate assuming at least 3 mils of aluminum shielding is $7.59E4$ rads (which $3$ mils of shielding is outside the validity range of SHIELDOSE2, and the dose is in silicon), whereas the dose estimate using SRIM with no shielding in a carbon composite is $6.94E4$ rads. Half of the TID is deposited in the first $\sim15$ mils of composite material.
+Interestingly, using the DSNE tables, the conservative dose estimate assuming at least 3 mils of aluminum shielding is $7.59E4$ rads (which $3$ mils of shielding is just inside the $>2$-mil validity range of SHIELDOSE2, and the dose is in silicon), whereas the dose estimate using SRIM with no shielding in a carbon composite is $6.94E4$ rads. Half of the TID is deposited in the first $\sim15$ mils of composite material.
 
 Using Figure \ref{fig:Dose_vs_IonEnergy} it can be concluded that the $3$ mils of aluminum shielding absorbed at least $20\%$ of the TID available. This would put the upper-end dose estimate using DNSE with shielding removed to be roughly $9.5E4$ rads.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{DSNE with Shielding}\label{ssec:DSNEwithShielding}
+\subsection[using DSNE Dose Tables]{Dose Estimation using DSNE Dose Tables with Finite Shielding}\label{ssec:DSNEwithShielding}
 
 To use the DSNE to estimate dose in composites, a finite shielding layer is forced on the analysis\footnote{The DSNE TID tables in concern were developed using SHEILDOSE2, which implicitly assumes a finite range of shielding thicknesses.}. TID produced by DSNE Table 3.3.1.10.2-1 (Table \ref{tab:DSNE_Plot_3.3.1.10.2-1}) can be found in DSNE Table 3.3.1.10.2-3, also shown here in Table \ref{tab:DSNE_UnshieldedSPETID}.
 
@@ -480,7 +484,7 @@ Examining Table \ref{tab:dose_composite_DSNE}, the range of doses is from $2.023
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{SRIM without Shielding}\label{ssec:SRIMnoShielding}
+\subsection[using SRIM 2013]{Dose Estimation using SRIM 2013 without Shielding}\label{ssec:SRIMnoShielding}
 
 The Stopping and Range of Ions in Matter (SRIM) \citep{ziegler2009srim} is a group of programs that calculate the stopping and range of ions in matter\footnote{\url{http://www.srim.org/SRIM/SRIMINTRO.htm}}. The ion stopping and range table calculator in SRIM was used in Section \ref{sssec:ProtonStoppingDistance}. For each run using TRIM (Transport of Ions in Matter), a mono-energetic beam of a single incident angle is used at the environment and transported through a series of predefined layers in a Monte Carlo fashion.
 
@@ -509,7 +513,7 @@ were it is assumed that the incident angle $\theta$ ranges\footnote{Initially, t
 
 TID can be computed by saving the ionization file once a sufficient number of test particles are ran. The ionization file contains information about the deposited ionization energy due to the primary ions $D_{\text{ions}}$ and to secondaries $D_{\text{recoils}}$ (called recoils) as a function of target depth. The ionization energy units are in eV per Angstrom per ion. To convert the deposited energy into rads, as a function of incident ion energy, angle and deposited depth, the following conversion equation is used
 \begin{equation}
-D(E,\theta,r) = [D_{\text{ions}} + D_{\text{recoils}}](r) \times \frac{10^8 \text{ \si{\angstrom}}}{\text{cm}} \times \frac{1.60218\times 10^{-19} \text{ J}}{\text{eV}} \times \frac{\Phi(E,\theta)}{\rho[\text{kg cm$^{-3}$}]} ,
+D(E,\theta,r) = [D_{\text{ions}} + D_{\text{recoils}}](E,\theta,r) \times \frac{10^8 \text{ \si{\angstrom}}}{\text{cm}} \times \frac{1.60218\times 10^{-19} \text{ J}}{\text{eV}} \times \frac{\Phi(E,\theta)}{\rho[\text{kg cm$^{-3}$}]} ,
 \end{equation}
 where $\rho$ is the material density in units of kg cm$^{-3}$. The dose as a function of energy or as a function of depth (see Figure \ref{fig:LayerDoseinSlab_vs_Depth}) can be calculated by summing over the other variables.
 
@@ -578,11 +582,12 @@ From Figure \ref{fig:TotalDoseinSphere_vs_Thickness}, the TID absorbed by $20$ m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SRIM Comparison with DSNE (SHIELDOSE2)}
+\label{sec:SRIMvsDSNE}
 
-The doses computed in SRIM are compared with DSNE Table 3.3.1.10.2-3 (see Table \ref{tab:DSNE_UnshieldedSPETID}). First, the SRIM doses are computed in a slab using the SPE worst case 1 year environment (DSNE Table 3.3.1.10.2-1) and are compared with doses computed in SPENVIS. The same exact set of knobs is used in computing DSNE Table~3.3.1.10.2-3, except the \textsf{slab} option is used instead. It doesn't matter whether a finite or infinite slab is used. Both were checked and there were no differences with this particular energy spectrum and ion (protons). The SRIM doses in a slab and sphere are summarized in Table \ref{tab:SRIM_doses} and comparisons with SHIELDOSE2 (see Appendix \ref{asec:SPENVISOutput}) are shown in Figure \ref{fig:Dose_vs_shielding_slab_comparison}.
+The doses computed in SRIM are compared with DSNE Table 3.3.1.10.2-3 (see Table~\ref{tab:DSNE_UnshieldedSPETID}). First, the SRIM doses are computed in a slab using the SPE worst case 1 year environment (DSNE Table 3.3.1.10.2-1) and are compared with doses computed in SPENVIS. The same exact set of knobs is used in computing DSNE Table~3.3.1.10.2-3, except the \textsf{slab} option is used instead. It doesn't matter whether a finite or infinite slab is used. Both were checked and there were no differences with this particular energy spectrum and ion (protons). The SRIM doses in a slab and sphere are summarized in Table \ref{tab:SRIM_doses} and comparisons with SHIELDOSE2 (see Appendix \ref{asec:SPENVISOutput}) are shown in Figure \ref{fig:Dose_vs_shielding_slab_comparison}.
 
 \begin{table}[h]\centering
-	\caption{Dose to silicon in slab and spherical geometric as a function of aluminum shielding thickness. Equation \eqref{eq:seltzer86_Eq9-powerlawDose2} was used to convert slab doses to sphere doses.}\label{tab:SRIM_doses}
+	\caption{Dose to silicon in slab and spherical geometries as a function of aluminum shielding thickness. Equation \eqref{eq:seltzer86_Eq9-powerlawDose2} was used to convert slab doses to sphere doses.}\label{tab:SRIM_doses}
 	\begin{tabular}{|c | c | c |}\hline
 		Al thickness [mm] & Dose in slab [rad] & Dose in sphere [rad]  \\\hline
 		1.0E-2 & 1.57E5 & 5.45E5 \\\hline
@@ -611,7 +616,7 @@ The SRIM-DSNE comparison shown in Figure \ref{fig:Dose_vs_shielding_sphere_compa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \appendix
 \addcontentsline{toc}{section}{Appendix}
 \section{Ion Stopping and Range Tables}

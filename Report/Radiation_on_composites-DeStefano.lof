@@ -1,8 +1,8 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces The unshielded SPE integral and differential flux as shown in DSNE Figure\nobreakspace {}3.3.1.10.2-1.\relax }}{6}{figure.caption.11}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Dose in carbon composite per 0.2 mm as a function of depth in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Total dose as a function of carbon composite thickness in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Dose per 0.1 MeV as a function of ion energy using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{12}{figure.caption.18}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Dose per 0.2 mm as a function of depth in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{14}{figure.caption.19}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Total dose as a function of carbon composite thickness in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{14}{figure.caption.20}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Comparison between slab dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }}{15}{figure.caption.22}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between sphere dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }}{16}{figure.caption.23}%
+\contentsline {figure}{\numberline {1}{\ignorespaces The unshielded SPE integral and differential flux as shown in DSNE Figure\nobreakspace {}3.3.1.10.2-1.\relax }}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Dose in carbon composite per 0.2 mm as a function of depth in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Total dose as a function of carbon composite thickness in a slab using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Dose per 0.1 MeV as a function of ion energy using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{13}{figure.caption.18}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Dose per 0.2 mm as a function of depth in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Total dose as a function of carbon composite thickness in a sphere using DSNE Table 3.3.1.10.2-1 as the ion environment.\relax }}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Comparison between slab dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }}{16}{figure.caption.22}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between sphere dose as a function of aluminum shielding thickness of SRIM and SPENVIS (i.e., SHIELDOSE2) runs.\relax }}{17}{figure.caption.23}%

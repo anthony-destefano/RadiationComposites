@@ -14,13 +14,14 @@ depth, dose = np.loadtxt(filename + '.txt', unpack=True)
 
 fig, ax = plt.subplots()
 
-y_pos = np.arange(np.size(depth))
+#y_pos = np.arange(np.size(depth))
 
 #ax.semilogy(depth, dose)
-ax.bar(y_pos, dose, width=1.0)
-plt.xticks(y_pos[0::9], depth[0::9])
-ax.set_yscale('log')
-ax.set_xscale('log')
+#ax.bar(depth, dose, width=1.0)
+#plt.xticks(y_pos, depth)
+ax.loglog(depth, dose, marker='o')
+# ax.set_yscale('log')
+# ax.set_xscale('log')
 
 ax.set_ylabel('Dose per 0.1 MeV (rad)')
 ax.set_xlabel('Proton Energy (MeV)')
